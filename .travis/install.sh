@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Exit Once failed
-set -Eeuxo pipefail
+# set -Eeuxo pipefail
 
 if [ ! -f "$PROTO_DIR/bin/protoc" ]; then
   # Cleanup Origin Data
