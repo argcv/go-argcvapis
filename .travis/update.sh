@@ -4,6 +4,7 @@
 if [[ $(git status --porcelain) ]]; then
   # Changes
   echo "Changed: make an auto commit"
+  git add .
   git commit -m "Auto Commit: $(date '+%Y-%m-%d %H:%M:%S')"
   git push https://${GH_TOKEN}@github.com/argcv/go-argcvapis.git
   echo "Updated..."
