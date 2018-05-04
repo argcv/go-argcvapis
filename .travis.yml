@@ -25,9 +25,17 @@ script:
   # Develop Mode:
   - env ARGCV_REPO_URL=https://github.com/yuikns/argcv.git ./sync_proto.sh
 
-after_script:
-  # Check Results:
-  - find .
+# after_script:
+#   # Check Results:
+#   - find .
 
+
+deploy:
+  - provider: script
+    keep-history: true
+    skip-cleanup: true
+    script: . .travis/update.sh
+    on:
+      branch: master
 
 
