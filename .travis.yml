@@ -10,10 +10,7 @@ cache:
    - $HOME/proto
 
 env:
-  - PROTO_VERSION="3.5.2"
-  - PROTO_BASE="$HOME/proto"
-  - PROTO_DIR="$PROTO_BASE/$PROTO_VERSION"
-  - PATH="$PATH:$PROTO_DIR/bin"
+  - PROTO_VERSION="3.5.2" PROTO_BASE="$HOME/proto" PROTO_DIR="$PROTO_BASE/$PROTO_VERSION" PATH="$PATH:$PROTO_DIR/bin"
 
 before_install:
   - echo "pwd:$(pwd)"
