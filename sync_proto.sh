@@ -13,8 +13,6 @@ DELETE_ARGCV_REPO_ON_EXIT=0
 ARGCV_REPO_URL=${ARGCV_REPO_URL:-'https://github.com/argcv/argcv.git'}
 ARGCV_REPO_PATH=${ARGCV_REPO_PATH:-''}
 
-PROTO_DIR="$ARGCV_REPO_PATH/argcv"
-
 SRC_DIR="$GOPATH/src"
 
 cmd_check() {
@@ -46,6 +44,8 @@ if [[ -z $ARGCV_REPO_PATH ]]; then
   git clone $ARGCV_REPO_URL $ARGCV_REPO_PATH
   DELETE_ARGCV_REPO_ON_EXIT=1
 fi
+
+PROTO_DIR="$ARGCV_REPO_PATH/argcv"
 
 for file in $(find ${BASE_DIR} -type f -name "*.pb.go" -o -name "*.pb.gw.go"); do
     echo "Cleaning file: $file"
