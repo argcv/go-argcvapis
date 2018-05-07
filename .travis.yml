@@ -23,7 +23,7 @@ install:
 
 script:
   # Develop Mode:
-  - env ARGCV_REPO_URL=https://github.com/yuikns/argcv.git ./sync_proto.sh
+  - env ARGCV_REPO_URL=https://github.com/argcv/argcv.git ./sync_proto.sh
 
 deploy:
   - provider: script
