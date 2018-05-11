@@ -504,7 +504,7 @@ func NewOperationsClient(cc *grpc.ClientConn) OperationsClient {
 
 func (c *operationsClient) ListOperations(ctx context.Context, in *ListOperationsRequest, opts ...grpc.CallOption) (*ListOperationsResponse, error) {
 	out := new(ListOperationsResponse)
-	err := grpc.Invoke(ctx, "/argcv.longrunning.Operations/ListOperations", in, out, c.cc, opts...)
+	err := c.cc.Invoke(ctx, "/argcv.longrunning.Operations/ListOperations", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -513,7 +513,7 @@ func (c *operationsClient) ListOperations(ctx context.Context, in *ListOperation
 
 func (c *operationsClient) GetOperation(ctx context.Context, in *GetOperationRequest, opts ...grpc.CallOption) (*Operation, error) {
 	out := new(Operation)
-	err := grpc.Invoke(ctx, "/argcv.longrunning.Operations/GetOperation", in, out, c.cc, opts...)
+	err := c.cc.Invoke(ctx, "/argcv.longrunning.Operations/GetOperation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -522,7 +522,7 @@ func (c *operationsClient) GetOperation(ctx context.Context, in *GetOperationReq
 
 func (c *operationsClient) DeleteOperation(ctx context.Context, in *DeleteOperationRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := grpc.Invoke(ctx, "/argcv.longrunning.Operations/DeleteOperation", in, out, c.cc, opts...)
+	err := c.cc.Invoke(ctx, "/argcv.longrunning.Operations/DeleteOperation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -531,7 +531,7 @@ func (c *operationsClient) DeleteOperation(ctx context.Context, in *DeleteOperat
 
 func (c *operationsClient) CancelOperation(ctx context.Context, in *CancelOperationRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := grpc.Invoke(ctx, "/argcv.longrunning.Operations/CancelOperation", in, out, c.cc, opts...)
+	err := c.cc.Invoke(ctx, "/argcv.longrunning.Operations/CancelOperation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
