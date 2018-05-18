@@ -46,8 +46,7 @@ func NewManulClient(cc *grpc.ClientConn) ManulClient {
 	return &manulClient{cc}
 }
 
-// Server API for Manul service
-
+// ManulServer is the server API for Manul service.
 type ManulServer interface {
 }
 

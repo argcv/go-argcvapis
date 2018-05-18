@@ -45,8 +45,7 @@ func NewJobServiceClient(cc *grpc.ClientConn) JobServiceClient {
 	return &jobServiceClient{cc}
 }
 
-// Server API for JobService service
-
+// JobServiceServer is the server API for JobService service.
 type JobServiceServer interface {
 }
 

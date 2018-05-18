@@ -107,8 +107,7 @@ func NewAdminServiceClient(cc *grpc.ClientConn) AdminServiceClient {
 	return &adminServiceClient{cc}
 }
 
-// Server API for AdminService service
-
+// AdminServiceServer is the server API for AdminService service.
 type AdminServiceServer interface {
 }
 

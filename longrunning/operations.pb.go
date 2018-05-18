@@ -539,8 +539,7 @@ func (c *operationsClient) CancelOperation(ctx context.Context, in *CancelOperat
 	return out, nil
 }
 
-// Server API for Operations service
-
+// OperationsServer is the server API for Operations service.
 type OperationsServer interface {
 	// Lists operations that match the specified filter in the request. If the
 	// server doesn't support this method, it returns `UNIMPLEMENTED`.
