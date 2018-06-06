@@ -19,7 +19,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type Http struct {
-	Rules                []*HttpRule `protobuf:"bytes,1,rep,name=rules" json:"rules,omitempty"`
+	Rules                []*HttpRule `protobuf:"bytes,1,rep,name=rules,proto3" json:"rules,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
 	XXX_unrecognized     []byte      `json:"-"`
 	XXX_sizecache        int32       `json:"-"`
@@ -57,7 +57,7 @@ func (m *Http) GetRules() []*HttpRule {
 }
 
 type HttpRule struct {
-	Selector string `protobuf:"bytes,1,opt,name=selector" json:"selector,omitempty"`
+	Selector string `protobuf:"bytes,1,opt,name=selector,proto3" json:"selector,omitempty"`
 	// Types that are valid to be assigned to Pattern:
 	//	*HttpRule_Get
 	//	*HttpRule_Put
@@ -66,8 +66,8 @@ type HttpRule struct {
 	//	*HttpRule_Patch
 	//	*HttpRule_Custom
 	Pattern              isHttpRule_Pattern `protobuf_oneof:"pattern"`
-	Body                 string             `protobuf:"bytes,7,opt,name=body" json:"body,omitempty"`
-	AdditionalBindings   []*HttpRule        `protobuf:"bytes,11,rep,name=additional_bindings,json=additionalBindings" json:"additional_bindings,omitempty"`
+	Body                 string             `protobuf:"bytes,7,opt,name=body,proto3" json:"body,omitempty"`
+	AdditionalBindings   []*HttpRule        `protobuf:"bytes,11,rep,name=additional_bindings,json=additionalBindings,proto3" json:"additional_bindings,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
 	XXX_unrecognized     []byte             `json:"-"`
 	XXX_sizecache        int32              `json:"-"`
@@ -102,22 +102,22 @@ type isHttpRule_Pattern interface {
 }
 
 type HttpRule_Get struct {
-	Get string `protobuf:"bytes,2,opt,name=get,oneof"`
+	Get string `protobuf:"bytes,2,opt,name=get,proto3,oneof"`
 }
 type HttpRule_Put struct {
-	Put string `protobuf:"bytes,3,opt,name=put,oneof"`
+	Put string `protobuf:"bytes,3,opt,name=put,proto3,oneof"`
 }
 type HttpRule_Post struct {
-	Post string `protobuf:"bytes,4,opt,name=post,oneof"`
+	Post string `protobuf:"bytes,4,opt,name=post,proto3,oneof"`
 }
 type HttpRule_Delete struct {
-	Delete string `protobuf:"bytes,5,opt,name=delete,oneof"`
+	Delete string `protobuf:"bytes,5,opt,name=delete,proto3,oneof"`
 }
 type HttpRule_Patch struct {
-	Patch string `protobuf:"bytes,6,opt,name=patch,oneof"`
+	Patch string `protobuf:"bytes,6,opt,name=patch,proto3,oneof"`
 }
 type HttpRule_Custom struct {
-	Custom *CustomHttpPattern `protobuf:"bytes,8,opt,name=custom,oneof"`
+	Custom *CustomHttpPattern `protobuf:"bytes,8,opt,name=custom,proto3,oneof"`
 }
 
 func (*HttpRule_Get) isHttpRule_Pattern()    {}
@@ -328,8 +328,8 @@ func _HttpRule_OneofSizer(msg proto.Message) (n int) {
 }
 
 type CustomHttpPattern struct {
-	Kind                 string   `protobuf:"bytes,1,opt,name=kind" json:"kind,omitempty"`
-	Path                 string   `protobuf:"bytes,2,opt,name=path" json:"path,omitempty"`
+	Kind                 string   `protobuf:"bytes,1,opt,name=kind,proto3" json:"kind,omitempty"`
+	Path                 string   `protobuf:"bytes,2,opt,name=path,proto3" json:"path,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

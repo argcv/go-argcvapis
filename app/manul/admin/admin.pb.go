@@ -26,11 +26,11 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 // A simple struct to define authorization info
 type Auth struct {
 	// Required: project id
-	Project string `protobuf:"bytes,1,opt,name=project" json:"project,omitempty"`
+	Project string `protobuf:"bytes,1,opt,name=project,proto3" json:"project,omitempty"`
 	// Required: user name
-	User string `protobuf:"bytes,2,opt,name=user" json:"user,omitempty"`
+	User string `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
 	// Required: secret
-	Secret               string   `protobuf:"bytes,3,opt,name=secret" json:"secret,omitempty"`
+	Secret               string   `protobuf:"bytes,3,opt,name=secret,proto3" json:"secret,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

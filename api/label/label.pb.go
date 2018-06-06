@@ -45,9 +45,9 @@ func (LabelDescriptor_ValueType) EnumDescriptor() ([]byte, []int) {
 }
 
 type LabelDescriptor struct {
-	Key                  string                    `protobuf:"bytes,1,opt,name=key" json:"key,omitempty"`
-	ValueType            LabelDescriptor_ValueType `protobuf:"varint,2,opt,name=value_type,json=valueType,enum=argcv.api.LabelDescriptor_ValueType" json:"value_type,omitempty"`
-	Description          string                    `protobuf:"bytes,3,opt,name=description" json:"description,omitempty"`
+	Key                  string                    `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
+	ValueType            LabelDescriptor_ValueType `protobuf:"varint,2,opt,name=value_type,json=valueType,proto3,enum=argcv.api.LabelDescriptor_ValueType" json:"value_type,omitempty"`
+	Description          string                    `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                  `json:"-"`
 	XXX_unrecognized     []byte                    `json:"-"`
 	XXX_sizecache        int32                     `json:"-"`

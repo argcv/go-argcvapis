@@ -21,10 +21,10 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 // A Generatic File
 type File struct {
-	Name                 string          `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
-	Path                 string          `protobuf:"bytes,2,opt,name=path" json:"path,omitempty"`
-	Size                 uint64          `protobuf:"varint,3,opt,name=size" json:"size,omitempty"`
-	Meta                 *_struct.Struct `protobuf:"bytes,4,opt,name=meta" json:"meta,omitempty"`
+	Name                 string          `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Path                 string          `protobuf:"bytes,2,opt,name=path,proto3" json:"path,omitempty"`
+	Size                 uint64          `protobuf:"varint,3,opt,name=size,proto3" json:"size,omitempty"`
+	Meta                 *_struct.Struct `protobuf:"bytes,4,opt,name=meta,proto3" json:"meta,omitempty"`
 	Data                 []byte          `protobuf:"bytes,5,opt,name=data,proto3" json:"data,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
