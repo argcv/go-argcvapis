@@ -179,8 +179,8 @@ func RegisterOperationsHandler(ctx context.Context, mux *runtime.ServeMux, conn 
 	return RegisterOperationsHandlerClient(ctx, mux, NewOperationsClient(conn))
 }
 
-// RegisterOperationsHandler registers the http handlers for service Operations to "mux".
-// The handlers forward requests to the grpc endpoint over the given implementation of "OperationsClient".
+// RegisterOperationsHandlerClient registers the http handlers for service Operations
+// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "OperationsClient".
 // Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "OperationsClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
 // "OperationsClient" to call the correct interceptors.
