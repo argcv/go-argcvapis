@@ -4,7 +4,7 @@
 if [[ $(git status --porcelain) ]]; then
   # Changes
   echo "Changed: make an auto commit"
-  git add .
+  git add . -A
   git commit -m "Auto Commit: $(date '+%Y-%m-%d %H:%M:%S %Z')"
   TMP_BRANCH="tmp$(date '+%Y-%m-%d-%H-%M-%S-%Z')"
   git branch $TMP_BRANCH
