@@ -2,11 +2,11 @@
 // source: argcv/proto/app/manul/job.proto
 
 /*
-Package job is a reverse proxy.
+Package manul is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package job
+package manul
 
 import (
 	"io"
