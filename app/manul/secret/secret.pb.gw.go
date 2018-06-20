@@ -2,11 +2,11 @@
 // source: argcv/proto/app/manul/secret.proto
 
 /*
-Package manul is a reverse proxy.
+Package secret is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package manul
+package secret
 
 import (
 	"io"

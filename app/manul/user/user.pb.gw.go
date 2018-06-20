@@ -2,11 +2,11 @@
 // source: argcv/proto/app/manul/user.proto
 
 /*
-Package manul is a reverse proxy.
+Package user is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package manul
+package user
 
 import (
 	"io"
