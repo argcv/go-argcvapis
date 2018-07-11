@@ -90,12 +90,7 @@ func request_SecretService_UpdateSecret_1(ctx context.Context, marshaler runtime
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "temp_token")
 	}
 
-	if protoReq.Origin == nil {
-		protoReq.Origin = &UpdateSecretRequest_TempToken{}
-	} else if _, ok := protoReq.Origin.(*UpdateSecretRequest_TempToken); !ok {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "expect type: *UpdateSecretRequest_TempToken, but: %t\n", protoReq.Origin)
-	}
-	protoReq.Origin.(*UpdateSecretRequest_TempToken).TempToken, err = runtime.String(val)
+	protoReq.TempToken, err = runtime.String(val)
 
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "temp_token", err)
