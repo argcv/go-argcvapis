@@ -382,27 +382,6 @@ func (m *ListJobsResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ListJobsResponse proto.InternalMessageInfo
 
-type isListJobsResponse_Result interface {
-	isListJobsResponse_Result()
-}
-
-type ListJobsResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type ListJobsResponse_Jobs struct {
-	Jobs *Jobs `protobuf:"bytes,4,opt,name=jobs,proto3,oneof"`
-}
-
-func (*ListJobsResponse_Error) isListJobsResponse_Result() {}
-func (*ListJobsResponse_Jobs) isListJobsResponse_Result()  {}
-
-func (m *ListJobsResponse) GetResult() isListJobsResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *ListJobsResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -415,6 +394,29 @@ func (m *ListJobsResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isListJobsResponse_Result interface {
+	isListJobsResponse_Result()
+}
+
+type ListJobsResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type ListJobsResponse_Jobs struct {
+	Jobs *Jobs `protobuf:"bytes,4,opt,name=jobs,proto3,oneof"`
+}
+
+func (*ListJobsResponse_Error) isListJobsResponse_Result() {}
+
+func (*ListJobsResponse_Jobs) isListJobsResponse_Result() {}
+
+func (m *ListJobsResponse) GetResult() isListJobsResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *ListJobsResponse) GetError() *status.Status {
@@ -600,27 +602,6 @@ func (m *CreateJobResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_CreateJobResponse proto.InternalMessageInfo
 
-type isCreateJobResponse_Result interface {
-	isCreateJobResponse_Result()
-}
-
-type CreateJobResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type CreateJobResponse_Job struct {
-	Job *Job `protobuf:"bytes,4,opt,name=job,proto3,oneof"`
-}
-
-func (*CreateJobResponse_Error) isCreateJobResponse_Result() {}
-func (*CreateJobResponse_Job) isCreateJobResponse_Result()   {}
-
-func (m *CreateJobResponse) GetResult() isCreateJobResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *CreateJobResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -633,6 +614,29 @@ func (m *CreateJobResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isCreateJobResponse_Result interface {
+	isCreateJobResponse_Result()
+}
+
+type CreateJobResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type CreateJobResponse_Job struct {
+	Job *Job `protobuf:"bytes,4,opt,name=job,proto3,oneof"`
+}
+
+func (*CreateJobResponse_Error) isCreateJobResponse_Result() {}
+
+func (*CreateJobResponse_Job) isCreateJobResponse_Result() {}
+
+func (m *CreateJobResponse) GetResult() isCreateJobResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *CreateJobResponse) GetError() *status.Status {
@@ -811,27 +815,6 @@ func (m *GetJobResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetJobResponse proto.InternalMessageInfo
 
-type isGetJobResponse_Result interface {
-	isGetJobResponse_Result()
-}
-
-type GetJobResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type GetJobResponse_Job struct {
-	Job *Job `protobuf:"bytes,4,opt,name=job,proto3,oneof"`
-}
-
-func (*GetJobResponse_Error) isGetJobResponse_Result() {}
-func (*GetJobResponse_Job) isGetJobResponse_Result()   {}
-
-func (m *GetJobResponse) GetResult() isGetJobResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *GetJobResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -844,6 +827,29 @@ func (m *GetJobResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isGetJobResponse_Result interface {
+	isGetJobResponse_Result()
+}
+
+type GetJobResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type GetJobResponse_Job struct {
+	Job *Job `protobuf:"bytes,4,opt,name=job,proto3,oneof"`
+}
+
+func (*GetJobResponse_Error) isGetJobResponse_Result() {}
+
+func (*GetJobResponse_Job) isGetJobResponse_Result() {}
+
+func (m *GetJobResponse) GetResult() isGetJobResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *GetJobResponse) GetError() *status.Status {
@@ -1022,27 +1028,6 @@ func (m *CancelJobResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_CancelJobResponse proto.InternalMessageInfo
 
-type isCancelJobResponse_Result interface {
-	isCancelJobResponse_Result()
-}
-
-type CancelJobResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type CancelJobResponse_Job struct {
-	Job *Job `protobuf:"bytes,4,opt,name=job,proto3,oneof"`
-}
-
-func (*CancelJobResponse_Error) isCancelJobResponse_Result() {}
-func (*CancelJobResponse_Job) isCancelJobResponse_Result()   {}
-
-func (m *CancelJobResponse) GetResult() isCancelJobResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *CancelJobResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -1055,6 +1040,29 @@ func (m *CancelJobResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isCancelJobResponse_Result interface {
+	isCancelJobResponse_Result()
+}
+
+type CancelJobResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type CancelJobResponse_Job struct {
+	Job *Job `protobuf:"bytes,4,opt,name=job,proto3,oneof"`
+}
+
+func (*CancelJobResponse_Error) isCancelJobResponse_Result() {}
+
+func (*CancelJobResponse_Job) isCancelJobResponse_Result() {}
+
+func (m *CancelJobResponse) GetResult() isCancelJobResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *CancelJobResponse) GetError() *status.Status {

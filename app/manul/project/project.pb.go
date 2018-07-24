@@ -682,27 +682,6 @@ func (m *ListProjectsResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ListProjectsResponse proto.InternalMessageInfo
 
-type isListProjectsResponse_Result interface {
-	isListProjectsResponse_Result()
-}
-
-type ListProjectsResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type ListProjectsResponse_Projects struct {
-	Projects *Projects `protobuf:"bytes,4,opt,name=projects,proto3,oneof"`
-}
-
-func (*ListProjectsResponse_Error) isListProjectsResponse_Result()    {}
-func (*ListProjectsResponse_Projects) isListProjectsResponse_Result() {}
-
-func (m *ListProjectsResponse) GetResult() isListProjectsResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *ListProjectsResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -715,6 +694,29 @@ func (m *ListProjectsResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isListProjectsResponse_Result interface {
+	isListProjectsResponse_Result()
+}
+
+type ListProjectsResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type ListProjectsResponse_Projects struct {
+	Projects *Projects `protobuf:"bytes,4,opt,name=projects,proto3,oneof"`
+}
+
+func (*ListProjectsResponse_Error) isListProjectsResponse_Result() {}
+
+func (*ListProjectsResponse_Projects) isListProjectsResponse_Result() {}
+
+func (m *ListProjectsResponse) GetResult() isListProjectsResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *ListProjectsResponse) GetError() *status.Status {
@@ -888,27 +890,6 @@ func (m *CreateProjectResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_CreateProjectResponse proto.InternalMessageInfo
 
-type isCreateProjectResponse_Result interface {
-	isCreateProjectResponse_Result()
-}
-
-type CreateProjectResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type CreateProjectResponse_Project struct {
-	Project *Project `protobuf:"bytes,4,opt,name=project,proto3,oneof"`
-}
-
-func (*CreateProjectResponse_Error) isCreateProjectResponse_Result()   {}
-func (*CreateProjectResponse_Project) isCreateProjectResponse_Result() {}
-
-func (m *CreateProjectResponse) GetResult() isCreateProjectResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *CreateProjectResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -921,6 +902,29 @@ func (m *CreateProjectResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isCreateProjectResponse_Result interface {
+	isCreateProjectResponse_Result()
+}
+
+type CreateProjectResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type CreateProjectResponse_Project struct {
+	Project *Project `protobuf:"bytes,4,opt,name=project,proto3,oneof"`
+}
+
+func (*CreateProjectResponse_Error) isCreateProjectResponse_Result() {}
+
+func (*CreateProjectResponse_Project) isCreateProjectResponse_Result() {}
+
+func (m *CreateProjectResponse) GetResult() isCreateProjectResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *CreateProjectResponse) GetError() *status.Status {
@@ -1106,27 +1110,6 @@ func (m *UpdateProjectResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_UpdateProjectResponse proto.InternalMessageInfo
 
-type isUpdateProjectResponse_Result interface {
-	isUpdateProjectResponse_Result()
-}
-
-type UpdateProjectResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type UpdateProjectResponse_Project struct {
-	Project *Project `protobuf:"bytes,4,opt,name=project,proto3,oneof"`
-}
-
-func (*UpdateProjectResponse_Error) isUpdateProjectResponse_Result()   {}
-func (*UpdateProjectResponse_Project) isUpdateProjectResponse_Result() {}
-
-func (m *UpdateProjectResponse) GetResult() isUpdateProjectResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *UpdateProjectResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -1139,6 +1122,29 @@ func (m *UpdateProjectResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isUpdateProjectResponse_Result interface {
+	isUpdateProjectResponse_Result()
+}
+
+type UpdateProjectResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type UpdateProjectResponse_Project struct {
+	Project *Project `protobuf:"bytes,4,opt,name=project,proto3,oneof"`
+}
+
+func (*UpdateProjectResponse_Error) isUpdateProjectResponse_Result() {}
+
+func (*UpdateProjectResponse_Project) isUpdateProjectResponse_Result() {}
+
+func (m *UpdateProjectResponse) GetResult() isUpdateProjectResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *UpdateProjectResponse) GetError() *status.Status {
@@ -1326,27 +1332,6 @@ func (m *GetProjectResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetProjectResponse proto.InternalMessageInfo
 
-type isGetProjectResponse_Result interface {
-	isGetProjectResponse_Result()
-}
-
-type GetProjectResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type GetProjectResponse_Project struct {
-	Project *Project `protobuf:"bytes,4,opt,name=project,proto3,oneof"`
-}
-
-func (*GetProjectResponse_Error) isGetProjectResponse_Result()   {}
-func (*GetProjectResponse_Project) isGetProjectResponse_Result() {}
-
-func (m *GetProjectResponse) GetResult() isGetProjectResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *GetProjectResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -1359,6 +1344,29 @@ func (m *GetProjectResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isGetProjectResponse_Result interface {
+	isGetProjectResponse_Result()
+}
+
+type GetProjectResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type GetProjectResponse_Project struct {
+	Project *Project `protobuf:"bytes,4,opt,name=project,proto3,oneof"`
+}
+
+func (*GetProjectResponse_Error) isGetProjectResponse_Result() {}
+
+func (*GetProjectResponse_Project) isGetProjectResponse_Result() {}
+
+func (m *GetProjectResponse) GetResult() isGetProjectResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *GetProjectResponse) GetError() *status.Status {
@@ -1536,27 +1544,6 @@ func (m *GetProjectChecklistResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetProjectChecklistResponse proto.InternalMessageInfo
 
-type isGetProjectChecklistResponse_Result interface {
-	isGetProjectChecklistResponse_Result()
-}
-
-type GetProjectChecklistResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type GetProjectChecklistResponse_Data struct {
-	Data *ProjectChecklist `protobuf:"bytes,4,opt,name=data,proto3,oneof"`
-}
-
-func (*GetProjectChecklistResponse_Error) isGetProjectChecklistResponse_Result() {}
-func (*GetProjectChecklistResponse_Data) isGetProjectChecklistResponse_Result()  {}
-
-func (m *GetProjectChecklistResponse) GetResult() isGetProjectChecklistResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *GetProjectChecklistResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -1569,6 +1556,29 @@ func (m *GetProjectChecklistResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isGetProjectChecklistResponse_Result interface {
+	isGetProjectChecklistResponse_Result()
+}
+
+type GetProjectChecklistResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type GetProjectChecklistResponse_Data struct {
+	Data *ProjectChecklist `protobuf:"bytes,4,opt,name=data,proto3,oneof"`
+}
+
+func (*GetProjectChecklistResponse_Error) isGetProjectChecklistResponse_Result() {}
+
+func (*GetProjectChecklistResponse_Data) isGetProjectChecklistResponse_Result() {}
+
+func (m *GetProjectChecklistResponse) GetResult() isGetProjectChecklistResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *GetProjectChecklistResponse) GetError() *status.Status {
@@ -2005,27 +2015,6 @@ func (m *ListProjectMembersResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ListProjectMembersResponse proto.InternalMessageInfo
 
-type isListProjectMembersResponse_Result interface {
-	isListProjectMembersResponse_Result()
-}
-
-type ListProjectMembersResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type ListProjectMembersResponse_Members struct {
-	Members *ProjectMembers `protobuf:"bytes,4,opt,name=members,proto3,oneof"`
-}
-
-func (*ListProjectMembersResponse_Error) isListProjectMembersResponse_Result()   {}
-func (*ListProjectMembersResponse_Members) isListProjectMembersResponse_Result() {}
-
-func (m *ListProjectMembersResponse) GetResult() isListProjectMembersResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *ListProjectMembersResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -2038,6 +2027,29 @@ func (m *ListProjectMembersResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isListProjectMembersResponse_Result interface {
+	isListProjectMembersResponse_Result()
+}
+
+type ListProjectMembersResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type ListProjectMembersResponse_Members struct {
+	Members *ProjectMembers `protobuf:"bytes,4,opt,name=members,proto3,oneof"`
+}
+
+func (*ListProjectMembersResponse_Error) isListProjectMembersResponse_Result() {}
+
+func (*ListProjectMembersResponse_Members) isListProjectMembersResponse_Result() {}
+
+func (m *ListProjectMembersResponse) GetResult() isListProjectMembersResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *ListProjectMembersResponse) GetError() *status.Status {
@@ -2270,27 +2282,6 @@ func (m *UpdateProjectMemberResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_UpdateProjectMemberResponse proto.InternalMessageInfo
 
-type isUpdateProjectMemberResponse_Result interface {
-	isUpdateProjectMemberResponse_Result()
-}
-
-type UpdateProjectMemberResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type UpdateProjectMemberResponse_Member struct {
-	Member *ProjectMember `protobuf:"bytes,4,opt,name=member,proto3,oneof"`
-}
-
-func (*UpdateProjectMemberResponse_Error) isUpdateProjectMemberResponse_Result()  {}
-func (*UpdateProjectMemberResponse_Member) isUpdateProjectMemberResponse_Result() {}
-
-func (m *UpdateProjectMemberResponse) GetResult() isUpdateProjectMemberResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *UpdateProjectMemberResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -2303,6 +2294,29 @@ func (m *UpdateProjectMemberResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isUpdateProjectMemberResponse_Result interface {
+	isUpdateProjectMemberResponse_Result()
+}
+
+type UpdateProjectMemberResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type UpdateProjectMemberResponse_Member struct {
+	Member *ProjectMember `protobuf:"bytes,4,opt,name=member,proto3,oneof"`
+}
+
+func (*UpdateProjectMemberResponse_Error) isUpdateProjectMemberResponse_Result() {}
+
+func (*UpdateProjectMemberResponse_Member) isUpdateProjectMemberResponse_Result() {}
+
+func (m *UpdateProjectMemberResponse) GetResult() isUpdateProjectMemberResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *UpdateProjectMemberResponse) GetError() *status.Status {

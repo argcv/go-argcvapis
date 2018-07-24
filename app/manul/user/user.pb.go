@@ -356,27 +356,6 @@ func (m *ListUsersResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ListUsersResponse proto.InternalMessageInfo
 
-type isListUsersResponse_Result interface {
-	isListUsersResponse_Result()
-}
-
-type ListUsersResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type ListUsersResponse_Users struct {
-	Users *Users `protobuf:"bytes,4,opt,name=users,proto3,oneof"`
-}
-
-func (*ListUsersResponse_Error) isListUsersResponse_Result() {}
-func (*ListUsersResponse_Users) isListUsersResponse_Result() {}
-
-func (m *ListUsersResponse) GetResult() isListUsersResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *ListUsersResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -389,6 +368,29 @@ func (m *ListUsersResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isListUsersResponse_Result interface {
+	isListUsersResponse_Result()
+}
+
+type ListUsersResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type ListUsersResponse_Users struct {
+	Users *Users `protobuf:"bytes,4,opt,name=users,proto3,oneof"`
+}
+
+func (*ListUsersResponse_Error) isListUsersResponse_Result() {}
+
+func (*ListUsersResponse_Users) isListUsersResponse_Result() {}
+
+func (m *ListUsersResponse) GetResult() isListUsersResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *ListUsersResponse) GetError() *status.Status {
@@ -587,27 +589,6 @@ func (m *CreateUserResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_CreateUserResponse proto.InternalMessageInfo
 
-type isCreateUserResponse_Result interface {
-	isCreateUserResponse_Result()
-}
-
-type CreateUserResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type CreateUserResponse_User struct {
-	User *User `protobuf:"bytes,4,opt,name=user,proto3,oneof"`
-}
-
-func (*CreateUserResponse_Error) isCreateUserResponse_Result() {}
-func (*CreateUserResponse_User) isCreateUserResponse_Result()  {}
-
-func (m *CreateUserResponse) GetResult() isCreateUserResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *CreateUserResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -620,6 +601,29 @@ func (m *CreateUserResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isCreateUserResponse_Result interface {
+	isCreateUserResponse_Result()
+}
+
+type CreateUserResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type CreateUserResponse_User struct {
+	User *User `protobuf:"bytes,4,opt,name=user,proto3,oneof"`
+}
+
+func (*CreateUserResponse_Error) isCreateUserResponse_Result() {}
+
+func (*CreateUserResponse_User) isCreateUserResponse_Result() {}
+
+func (m *CreateUserResponse) GetResult() isCreateUserResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *CreateUserResponse) GetError() *status.Status {
@@ -815,27 +819,6 @@ func (m *UpdateUserResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_UpdateUserResponse proto.InternalMessageInfo
 
-type isUpdateUserResponse_Result interface {
-	isUpdateUserResponse_Result()
-}
-
-type UpdateUserResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type UpdateUserResponse_User struct {
-	User *User `protobuf:"bytes,4,opt,name=user,proto3,oneof"`
-}
-
-func (*UpdateUserResponse_Error) isUpdateUserResponse_Result() {}
-func (*UpdateUserResponse_User) isUpdateUserResponse_Result()  {}
-
-func (m *UpdateUserResponse) GetResult() isUpdateUserResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *UpdateUserResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -848,6 +831,29 @@ func (m *UpdateUserResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isUpdateUserResponse_Result interface {
+	isUpdateUserResponse_Result()
+}
+
+type UpdateUserResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type UpdateUserResponse_User struct {
+	User *User `protobuf:"bytes,4,opt,name=user,proto3,oneof"`
+}
+
+func (*UpdateUserResponse_Error) isUpdateUserResponse_Result() {}
+
+func (*UpdateUserResponse_User) isUpdateUserResponse_Result() {}
+
+func (m *UpdateUserResponse) GetResult() isUpdateUserResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *UpdateUserResponse) GetError() *status.Status {
@@ -1034,27 +1040,6 @@ func (m *GetUserResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetUserResponse proto.InternalMessageInfo
 
-type isGetUserResponse_Result interface {
-	isGetUserResponse_Result()
-}
-
-type GetUserResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type GetUserResponse_User struct {
-	User *User `protobuf:"bytes,4,opt,name=user,proto3,oneof"`
-}
-
-func (*GetUserResponse_Error) isGetUserResponse_Result() {}
-func (*GetUserResponse_User) isGetUserResponse_Result()  {}
-
-func (m *GetUserResponse) GetResult() isGetUserResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *GetUserResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -1067,6 +1052,29 @@ func (m *GetUserResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isGetUserResponse_Result interface {
+	isGetUserResponse_Result()
+}
+
+type GetUserResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type GetUserResponse_User struct {
+	User *User `protobuf:"bytes,4,opt,name=user,proto3,oneof"`
+}
+
+func (*GetUserResponse_Error) isGetUserResponse_Result() {}
+
+func (*GetUserResponse_User) isGetUserResponse_Result() {}
+
+func (m *GetUserResponse) GetResult() isGetUserResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *GetUserResponse) GetError() *status.Status {

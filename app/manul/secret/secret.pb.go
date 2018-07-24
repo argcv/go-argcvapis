@@ -185,27 +185,6 @@ func (m *UpdateSecretResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_UpdateSecretResponse proto.InternalMessageInfo
 
-type isUpdateSecretResponse_Result interface {
-	isUpdateSecretResponse_Result()
-}
-
-type UpdateSecretResponse_Error struct {
-	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
-}
-type UpdateSecretResponse_Secret struct {
-	Secret *Secret `protobuf:"bytes,4,opt,name=secret,proto3,oneof"`
-}
-
-func (*UpdateSecretResponse_Error) isUpdateSecretResponse_Result()  {}
-func (*UpdateSecretResponse_Secret) isUpdateSecretResponse_Result() {}
-
-func (m *UpdateSecretResponse) GetResult() isUpdateSecretResponse_Result {
-	if m != nil {
-		return m.Result
-	}
-	return nil
-}
-
 func (m *UpdateSecretResponse) GetSuccess() bool {
 	if m != nil {
 		return m.Success
@@ -218,6 +197,29 @@ func (m *UpdateSecretResponse) GetMessage() string {
 		return m.Message
 	}
 	return ""
+}
+
+type isUpdateSecretResponse_Result interface {
+	isUpdateSecretResponse_Result()
+}
+
+type UpdateSecretResponse_Error struct {
+	Error *status.Status `protobuf:"bytes,3,opt,name=error,proto3,oneof"`
+}
+
+type UpdateSecretResponse_Secret struct {
+	Secret *Secret `protobuf:"bytes,4,opt,name=secret,proto3,oneof"`
+}
+
+func (*UpdateSecretResponse_Error) isUpdateSecretResponse_Result() {}
+
+func (*UpdateSecretResponse_Secret) isUpdateSecretResponse_Result() {}
+
+func (m *UpdateSecretResponse) GetResult() isUpdateSecretResponse_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
 }
 
 func (m *UpdateSecretResponse) GetError() *status.Status {
