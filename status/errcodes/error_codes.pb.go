@@ -189,7 +189,7 @@ func (x Code) String() string {
 	return proto.EnumName(Code_name, int32(x))
 }
 func (Code) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_error_codes_5f193dc10d1f89eb, []int{0}
+	return fileDescriptor_7af2e92f4cddb2ae, []int{0}
 }
 
 func init() {
@@ -197,10 +197,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("argcv/proto/status/error_codes.proto", fileDescriptor_error_codes_5f193dc10d1f89eb)
+	proto.RegisterFile("argcv/proto/status/error_codes.proto", fileDescriptor_7af2e92f4cddb2ae)
 }
 
-var fileDescriptor_error_codes_5f193dc10d1f89eb = []byte{
+var fileDescriptor_7af2e92f4cddb2ae = []byte{
 	// 428 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0x91, 0x4f, 0x6f, 0x1a, 0x3d,
 	0x10, 0xc6, 0x5f, 0x92, 0xbc, 0x24, 0x31, 0x10, 0x1c, 0x27, 0x69, 0xbf, 0x40, 0x4f, 0x95, 0x0a,

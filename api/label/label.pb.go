@@ -41,7 +41,7 @@ func (x LabelDescriptor_ValueType) String() string {
 	return proto.EnumName(LabelDescriptor_ValueType_name, int32(x))
 }
 func (LabelDescriptor_ValueType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_label_5c2846868f91f4c6, []int{0, 0}
+	return fileDescriptor_ac2bbc4ccf6ec7ba, []int{0, 0}
 }
 
 type LabelDescriptor struct {
@@ -57,7 +57,7 @@ func (m *LabelDescriptor) Reset()         { *m = LabelDescriptor{} }
 func (m *LabelDescriptor) String() string { return proto.CompactTextString(m) }
 func (*LabelDescriptor) ProtoMessage()    {}
 func (*LabelDescriptor) Descriptor() ([]byte, []int) {
-	return fileDescriptor_label_5c2846868f91f4c6, []int{0}
+	return fileDescriptor_ac2bbc4ccf6ec7ba, []int{0}
 }
 func (m *LabelDescriptor) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_LabelDescriptor.Unmarshal(m, b)
@@ -103,9 +103,9 @@ func init() {
 	proto.RegisterEnum("argcv.api.LabelDescriptor_ValueType", LabelDescriptor_ValueType_name, LabelDescriptor_ValueType_value)
 }
 
-func init() { proto.RegisterFile("argcv/proto/api/label.proto", fileDescriptor_label_5c2846868f91f4c6) }
+func init() { proto.RegisterFile("argcv/proto/api/label.proto", fileDescriptor_ac2bbc4ccf6ec7ba) }
 
-var fileDescriptor_label_5c2846868f91f4c6 = []byte{
+var fileDescriptor_ac2bbc4ccf6ec7ba = []byte{
 	// 248 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x92, 0x4e, 0x2c, 0x4a, 0x4f,
 	0x2e, 0xd3, 0x2f, 0x28, 0xca, 0x2f, 0xc9, 0xd7, 0x4f, 0x2c, 0xc8, 0xd4, 0xcf, 0x49, 0x4c, 0x4a,

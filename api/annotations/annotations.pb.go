@@ -33,11 +33,9 @@ func init() {
 	proto.RegisterExtension(E_Http)
 }
 
-func init() {
-	proto.RegisterFile("argcv/proto/api/annotations.proto", fileDescriptor_annotations_cd6774bab0cd3dd6)
-}
+func init() { proto.RegisterFile("argcv/proto/api/annotations.proto", fileDescriptor_5607e0b910a5f036) }
 
-var fileDescriptor_annotations_cd6774bab0cd3dd6 = []byte{
+var fileDescriptor_5607e0b910a5f036 = []byte{
 	// 212 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x4c, 0x2c, 0x4a, 0x4f,
 	0x2e, 0xd3, 0x2f, 0x28, 0xca, 0x2f, 0xc9, 0xd7, 0x4f, 0x2c, 0xc8, 0xd4, 0x4f, 0xcc, 0xcb, 0xcb,

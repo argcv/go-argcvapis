@@ -71,7 +71,7 @@ func (m *LatLng) Reset()         { *m = LatLng{} }
 func (m *LatLng) String() string { return proto.CompactTextString(m) }
 func (*LatLng) ProtoMessage()    {}
 func (*LatLng) Descriptor() ([]byte, []int) {
-	return fileDescriptor_latlng_9971d8871aa4f95b, []int{0}
+	return fileDescriptor_90cd168e5b33c51d, []int{0}
 }
 func (m *LatLng) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_LatLng.Unmarshal(m, b)
@@ -109,11 +109,9 @@ func init() {
 	proto.RegisterType((*LatLng)(nil), "argcv.type.LatLng")
 }
 
-func init() {
-	proto.RegisterFile("argcv/proto/type/latlng.proto", fileDescriptor_latlng_9971d8871aa4f95b)
-}
+func init() { proto.RegisterFile("argcv/proto/type/latlng.proto", fileDescriptor_90cd168e5b33c51d) }
 
-var fileDescriptor_latlng_9971d8871aa4f95b = []byte{
+var fileDescriptor_90cd168e5b33c51d = []byte{
 	// 165 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x92, 0x4d, 0x2c, 0x4a, 0x4f,
 	0x2e, 0xd3, 0x2f, 0x28, 0xca, 0x2f, 0xc9, 0xd7, 0x2f, 0xa9, 0x2c, 0x48, 0xd5, 0xcf, 0x49, 0x2c,

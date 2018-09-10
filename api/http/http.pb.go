@@ -29,7 +29,7 @@ func (m *Http) Reset()         { *m = Http{} }
 func (m *Http) String() string { return proto.CompactTextString(m) }
 func (*Http) ProtoMessage()    {}
 func (*Http) Descriptor() ([]byte, []int) {
-	return fileDescriptor_http_dc4fa9b2ac2486f1, []int{0}
+	return fileDescriptor_823384e6c90ba5e1, []int{0}
 }
 func (m *Http) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Http.Unmarshal(m, b)
@@ -77,7 +77,7 @@ func (m *HttpRule) Reset()         { *m = HttpRule{} }
 func (m *HttpRule) String() string { return proto.CompactTextString(m) }
 func (*HttpRule) ProtoMessage()    {}
 func (*HttpRule) Descriptor() ([]byte, []int) {
-	return fileDescriptor_http_dc4fa9b2ac2486f1, []int{1}
+	return fileDescriptor_823384e6c90ba5e1, []int{1}
 }
 func (m *HttpRule) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_HttpRule.Unmarshal(m, b)
@@ -349,7 +349,7 @@ func (m *CustomHttpPattern) Reset()         { *m = CustomHttpPattern{} }
 func (m *CustomHttpPattern) String() string { return proto.CompactTextString(m) }
 func (*CustomHttpPattern) ProtoMessage()    {}
 func (*CustomHttpPattern) Descriptor() ([]byte, []int) {
-	return fileDescriptor_http_dc4fa9b2ac2486f1, []int{2}
+	return fileDescriptor_823384e6c90ba5e1, []int{2}
 }
 func (m *CustomHttpPattern) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CustomHttpPattern.Unmarshal(m, b)
@@ -389,9 +389,9 @@ func init() {
 	proto.RegisterType((*CustomHttpPattern)(nil), "argcv.api.CustomHttpPattern")
 }
 
-func init() { proto.RegisterFile("argcv/proto/api/http.proto", fileDescriptor_http_dc4fa9b2ac2486f1) }
+func init() { proto.RegisterFile("argcv/proto/api/http.proto", fileDescriptor_823384e6c90ba5e1) }
 
-var fileDescriptor_http_dc4fa9b2ac2486f1 = []byte{
+var fileDescriptor_823384e6c90ba5e1 = []byte{
 	// 341 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x52, 0x4d, 0x4b, 0xf3, 0x40,
 	0x10, 0x7e, 0xd3, 0xa6, 0x69, 0x33, 0x3d, 0xbd, 0x53, 0x91, 0xa5, 0x78, 0x28, 0x3d, 0x55, 0xc4,
