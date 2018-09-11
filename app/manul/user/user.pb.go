@@ -46,6 +46,7 @@ var UserType_name = map[int32]string{
 	1: "USER",
 	2: "BOT",
 }
+
 var UserType_value = map[string]int32{
 	"ADMIN": 0,
 	"USER":  1,
@@ -55,6 +56,7 @@ var UserType_value = map[string]int32{
 func (x UserType) String() string {
 	return proto.EnumName(UserType_name, int32(x))
 }
+
 func (UserType) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{0}
 }

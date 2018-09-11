@@ -40,6 +40,7 @@ var ProjectChecklistElemType_name = map[int32]string{
 	0: "REGULAR_FILE",
 	1: "DIRECTORY",
 }
+
 var ProjectChecklistElemType_value = map[string]int32{
 	"REGULAR_FILE": 0,
 	"DIRECTORY":    1,
@@ -48,6 +49,7 @@ var ProjectChecklistElemType_value = map[string]int32{
 func (x ProjectChecklistElemType) String() string {
 	return proto.EnumName(ProjectChecklistElemType_name, int32(x))
 }
+
 func (ProjectChecklistElemType) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_cf85089881f8148b, []int{0}
 }
@@ -70,6 +72,7 @@ var ProjectMemberType_name = map[int32]string{
 	3: "REPORTER",
 	4: "GUEST",
 }
+
 var ProjectMemberType_value = map[string]int32{
 	"OWNER":     0,
 	"MASTER":    1,
@@ -81,6 +84,7 @@ var ProjectMemberType_value = map[string]int32{
 func (x ProjectMemberType) String() string {
 	return proto.EnumName(ProjectMemberType_name, int32(x))
 }
+
 func (ProjectMemberType) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_cf85089881f8148b, []int{1}
 }
@@ -104,6 +108,7 @@ var ProjectMemberOperation_name = map[int32]string{
 	2: "UPSERT",
 	3: "DELETE",
 }
+
 var ProjectMemberOperation_value = map[string]int32{
 	"INSERT": 0,
 	"UPDATE": 1,
@@ -114,6 +119,7 @@ var ProjectMemberOperation_value = map[string]int32{
 func (x ProjectMemberOperation) String() string {
 	return proto.EnumName(ProjectMemberOperation_name, int32(x))
 }
+
 func (ProjectMemberOperation) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_cf85089881f8148b, []int{2}
 }

@@ -64,6 +64,7 @@ var JobProgress_name = map[int32]string{
 	8: "PERMISSION_DENIED",
 	9: "UNKNOWN",
 }
+
 var JobProgress_value = map[string]int32{
 	"OK":                0,
 	"NOT_FOUND":         1,
@@ -80,6 +81,7 @@ var JobProgress_value = map[string]int32{
 func (x JobProgress) String() string {
 	return proto.EnumName(JobProgress_name, int32(x))
 }
+
 func (JobProgress) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{0}
 }

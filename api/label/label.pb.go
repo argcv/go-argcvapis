@@ -31,6 +31,7 @@ var LabelDescriptor_ValueType_name = map[int32]string{
 	1: "BOOL",
 	2: "INT64",
 }
+
 var LabelDescriptor_ValueType_value = map[string]int32{
 	"STRING": 0,
 	"BOOL":   1,
@@ -40,6 +41,7 @@ var LabelDescriptor_ValueType_value = map[string]int32{
 func (x LabelDescriptor_ValueType) String() string {
 	return proto.EnumName(LabelDescriptor_ValueType_name, int32(x))
 }
+
 func (LabelDescriptor_ValueType) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_ac2bbc4ccf6ec7ba, []int{0, 0}
 }

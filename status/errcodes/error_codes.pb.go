@@ -164,6 +164,7 @@ var Code_name = map[int32]string{
 	15: "DATA_LOSS",
 	20: "DO_NOT_USE_RESERVED_FOR_FUTURE_EXPANSION_USE_DEFAULT_IN_SWITCH_INSTEAD_",
 }
+
 var Code_value = map[string]int32{
 	"OK":                  0,
 	"CANCELLED":           1,
@@ -188,6 +189,7 @@ var Code_value = map[string]int32{
 func (x Code) String() string {
 	return proto.EnumName(Code_name, int32(x))
 }
+
 func (Code) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_7af2e92f4cddb2ae, []int{0}
 }
