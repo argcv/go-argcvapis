@@ -43,8 +43,8 @@ func (m *File) XXX_Unmarshal(b []byte) error {
 func (m *File) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_File.Marshal(b, m, deterministic)
 }
-func (dst *File) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_File.Merge(dst, src)
+func (m *File) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_File.Merge(m, src)
 }
 func (m *File) XXX_Size() int {
 	return xxx_messageInfo_File.Size(m)
@@ -110,8 +110,8 @@ func (m *Files) XXX_Unmarshal(b []byte) error {
 func (m *Files) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Files.Marshal(b, m, deterministic)
 }
-func (dst *Files) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Files.Merge(dst, src)
+func (m *Files) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Files.Merge(m, src)
 }
 func (m *Files) XXX_Size() int {
 	return xxx_messageInfo_Files.Size(m)

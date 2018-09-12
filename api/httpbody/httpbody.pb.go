@@ -38,8 +38,8 @@ func (m *HttpBody) XXX_Unmarshal(b []byte) error {
 func (m *HttpBody) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_HttpBody.Marshal(b, m, deterministic)
 }
-func (dst *HttpBody) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_HttpBody.Merge(dst, src)
+func (m *HttpBody) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_HttpBody.Merge(m, src)
 }
 func (m *HttpBody) XXX_Size() int {
 	return xxx_messageInfo_HttpBody.Size(m)

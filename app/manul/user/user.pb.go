@@ -84,8 +84,8 @@ func (m *AuthToken) XXX_Unmarshal(b []byte) error {
 func (m *AuthToken) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AuthToken.Marshal(b, m, deterministic)
 }
-func (dst *AuthToken) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AuthToken.Merge(dst, src)
+func (m *AuthToken) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AuthToken.Merge(m, src)
 }
 func (m *AuthToken) XXX_Size() int {
 	return xxx_messageInfo_AuthToken.Size(m)
@@ -143,8 +143,8 @@ func (m *User) XXX_Unmarshal(b []byte) error {
 func (m *User) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_User.Marshal(b, m, deterministic)
 }
-func (dst *User) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_User.Merge(dst, src)
+func (m *User) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_User.Merge(m, src)
 }
 func (m *User) XXX_Size() int {
 	return xxx_messageInfo_User.Size(m)
@@ -212,8 +212,8 @@ func (m *Users) XXX_Unmarshal(b []byte) error {
 func (m *Users) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Users.Marshal(b, m, deterministic)
 }
-func (dst *Users) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Users.Merge(dst, src)
+func (m *Users) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Users.Merge(m, src)
 }
 func (m *Users) XXX_Size() int {
 	return xxx_messageInfo_Users.Size(m)
@@ -278,8 +278,8 @@ func (m *ListUsersRequest) XXX_Unmarshal(b []byte) error {
 func (m *ListUsersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ListUsersRequest.Marshal(b, m, deterministic)
 }
-func (dst *ListUsersRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListUsersRequest.Merge(dst, src)
+func (m *ListUsersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListUsersRequest.Merge(m, src)
 }
 func (m *ListUsersRequest) XXX_Size() int {
 	return xxx_messageInfo_ListUsersRequest.Size(m)
@@ -346,8 +346,8 @@ func (m *ListUsersResponse) XXX_Unmarshal(b []byte) error {
 func (m *ListUsersResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ListUsersResponse.Marshal(b, m, deterministic)
 }
-func (dst *ListUsersResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListUsersResponse.Merge(dst, src)
+func (m *ListUsersResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListUsersResponse.Merge(m, src)
 }
 func (m *ListUsersResponse) XXX_Size() int {
 	return xxx_messageInfo_ListUsersResponse.Size(m)
@@ -508,8 +508,8 @@ func (m *CreateUserRequest) XXX_Unmarshal(b []byte) error {
 func (m *CreateUserRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CreateUserRequest.Marshal(b, m, deterministic)
 }
-func (dst *CreateUserRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CreateUserRequest.Merge(dst, src)
+func (m *CreateUserRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CreateUserRequest.Merge(m, src)
 }
 func (m *CreateUserRequest) XXX_Size() int {
 	return xxx_messageInfo_CreateUserRequest.Size(m)
@@ -579,8 +579,8 @@ func (m *CreateUserResponse) XXX_Unmarshal(b []byte) error {
 func (m *CreateUserResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CreateUserResponse.Marshal(b, m, deterministic)
 }
-func (dst *CreateUserResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CreateUserResponse.Merge(dst, src)
+func (m *CreateUserResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CreateUserResponse.Merge(m, src)
 }
 func (m *CreateUserResponse) XXX_Size() int {
 	return xxx_messageInfo_CreateUserResponse.Size(m)
@@ -741,8 +741,8 @@ func (m *UpdateUserRequest) XXX_Unmarshal(b []byte) error {
 func (m *UpdateUserRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UpdateUserRequest.Marshal(b, m, deterministic)
 }
-func (dst *UpdateUserRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UpdateUserRequest.Merge(dst, src)
+func (m *UpdateUserRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UpdateUserRequest.Merge(m, src)
 }
 func (m *UpdateUserRequest) XXX_Size() int {
 	return xxx_messageInfo_UpdateUserRequest.Size(m)
@@ -809,8 +809,8 @@ func (m *UpdateUserResponse) XXX_Unmarshal(b []byte) error {
 func (m *UpdateUserResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UpdateUserResponse.Marshal(b, m, deterministic)
 }
-func (dst *UpdateUserResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UpdateUserResponse.Merge(dst, src)
+func (m *UpdateUserResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UpdateUserResponse.Merge(m, src)
 }
 func (m *UpdateUserResponse) XXX_Size() int {
 	return xxx_messageInfo_UpdateUserResponse.Size(m)
@@ -969,8 +969,8 @@ func (m *GetUserRequest) XXX_Unmarshal(b []byte) error {
 func (m *GetUserRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetUserRequest.Marshal(b, m, deterministic)
 }
-func (dst *GetUserRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetUserRequest.Merge(dst, src)
+func (m *GetUserRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetUserRequest.Merge(m, src)
 }
 func (m *GetUserRequest) XXX_Size() int {
 	return xxx_messageInfo_GetUserRequest.Size(m)
@@ -1030,8 +1030,8 @@ func (m *GetUserResponse) XXX_Unmarshal(b []byte) error {
 func (m *GetUserResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetUserResponse.Marshal(b, m, deterministic)
 }
-func (dst *GetUserResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetUserResponse.Merge(dst, src)
+func (m *GetUserResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetUserResponse.Merge(m, src)
 }
 func (m *GetUserResponse) XXX_Size() int {
 	return xxx_messageInfo_GetUserResponse.Size(m)
@@ -1189,8 +1189,8 @@ func (m *DeleteUserRequest) XXX_Unmarshal(b []byte) error {
 func (m *DeleteUserRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DeleteUserRequest.Marshal(b, m, deterministic)
 }
-func (dst *DeleteUserRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteUserRequest.Merge(dst, src)
+func (m *DeleteUserRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeleteUserRequest.Merge(m, src)
 }
 func (m *DeleteUserRequest) XXX_Size() int {
 	return xxx_messageInfo_DeleteUserRequest.Size(m)
@@ -1237,8 +1237,8 @@ func (m *DeleteUserResponse) XXX_Unmarshal(b []byte) error {
 func (m *DeleteUserResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DeleteUserResponse.Marshal(b, m, deterministic)
 }
-func (dst *DeleteUserResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteUserResponse.Merge(dst, src)
+func (m *DeleteUserResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeleteUserResponse.Merge(m, src)
 }
 func (m *DeleteUserResponse) XXX_Size() int {
 	return xxx_messageInfo_DeleteUserResponse.Size(m)

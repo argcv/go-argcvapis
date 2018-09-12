@@ -67,8 +67,8 @@ func (m *LabelDescriptor) XXX_Unmarshal(b []byte) error {
 func (m *LabelDescriptor) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_LabelDescriptor.Marshal(b, m, deterministic)
 }
-func (dst *LabelDescriptor) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LabelDescriptor.Merge(dst, src)
+func (m *LabelDescriptor) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_LabelDescriptor.Merge(m, src)
 }
 func (m *LabelDescriptor) XXX_Size() int {
 	return xxx_messageInfo_LabelDescriptor.Size(m)

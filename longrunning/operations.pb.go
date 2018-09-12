@@ -68,8 +68,8 @@ func (m *Operation) XXX_Unmarshal(b []byte) error {
 func (m *Operation) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Operation.Marshal(b, m, deterministic)
 }
-func (dst *Operation) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Operation.Merge(dst, src)
+func (m *Operation) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Operation.Merge(m, src)
 }
 func (m *Operation) XXX_Size() int {
 	return xxx_messageInfo_Operation.Size(m)
@@ -233,8 +233,8 @@ func (m *GetOperationRequest) XXX_Unmarshal(b []byte) error {
 func (m *GetOperationRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetOperationRequest.Marshal(b, m, deterministic)
 }
-func (dst *GetOperationRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetOperationRequest.Merge(dst, src)
+func (m *GetOperationRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetOperationRequest.Merge(m, src)
 }
 func (m *GetOperationRequest) XXX_Size() int {
 	return xxx_messageInfo_GetOperationRequest.Size(m)
@@ -279,8 +279,8 @@ func (m *ListOperationsRequest) XXX_Unmarshal(b []byte) error {
 func (m *ListOperationsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ListOperationsRequest.Marshal(b, m, deterministic)
 }
-func (dst *ListOperationsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListOperationsRequest.Merge(dst, src)
+func (m *ListOperationsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListOperationsRequest.Merge(m, src)
 }
 func (m *ListOperationsRequest) XXX_Size() int {
 	return xxx_messageInfo_ListOperationsRequest.Size(m)
@@ -342,8 +342,8 @@ func (m *ListOperationsResponse) XXX_Unmarshal(b []byte) error {
 func (m *ListOperationsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ListOperationsResponse.Marshal(b, m, deterministic)
 }
-func (dst *ListOperationsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListOperationsResponse.Merge(dst, src)
+func (m *ListOperationsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListOperationsResponse.Merge(m, src)
 }
 func (m *ListOperationsResponse) XXX_Size() int {
 	return xxx_messageInfo_ListOperationsResponse.Size(m)
@@ -389,8 +389,8 @@ func (m *CancelOperationRequest) XXX_Unmarshal(b []byte) error {
 func (m *CancelOperationRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CancelOperationRequest.Marshal(b, m, deterministic)
 }
-func (dst *CancelOperationRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CancelOperationRequest.Merge(dst, src)
+func (m *CancelOperationRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CancelOperationRequest.Merge(m, src)
 }
 func (m *CancelOperationRequest) XXX_Size() int {
 	return xxx_messageInfo_CancelOperationRequest.Size(m)
@@ -429,8 +429,8 @@ func (m *DeleteOperationRequest) XXX_Unmarshal(b []byte) error {
 func (m *DeleteOperationRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DeleteOperationRequest.Marshal(b, m, deterministic)
 }
-func (dst *DeleteOperationRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteOperationRequest.Merge(dst, src)
+func (m *DeleteOperationRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeleteOperationRequest.Merge(m, src)
 }
 func (m *DeleteOperationRequest) XXX_Size() int {
 	return xxx_messageInfo_DeleteOperationRequest.Size(m)

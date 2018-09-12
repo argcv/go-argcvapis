@@ -52,8 +52,8 @@ func (m *RetryInfo) XXX_Unmarshal(b []byte) error {
 func (m *RetryInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_RetryInfo.Marshal(b, m, deterministic)
 }
-func (dst *RetryInfo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RetryInfo.Merge(dst, src)
+func (m *RetryInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RetryInfo.Merge(m, src)
 }
 func (m *RetryInfo) XXX_Size() int {
 	return xxx_messageInfo_RetryInfo.Size(m)
@@ -94,8 +94,8 @@ func (m *DebugInfo) XXX_Unmarshal(b []byte) error {
 func (m *DebugInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DebugInfo.Marshal(b, m, deterministic)
 }
-func (dst *DebugInfo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DebugInfo.Merge(dst, src)
+func (m *DebugInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DebugInfo.Merge(m, src)
 }
 func (m *DebugInfo) XXX_Size() int {
 	return xxx_messageInfo_DebugInfo.Size(m)
@@ -151,8 +151,8 @@ func (m *QuotaFailure) XXX_Unmarshal(b []byte) error {
 func (m *QuotaFailure) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_QuotaFailure.Marshal(b, m, deterministic)
 }
-func (dst *QuotaFailure) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_QuotaFailure.Merge(dst, src)
+func (m *QuotaFailure) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_QuotaFailure.Merge(m, src)
 }
 func (m *QuotaFailure) XXX_Size() int {
 	return xxx_messageInfo_QuotaFailure.Size(m)
@@ -202,8 +202,8 @@ func (m *QuotaFailure_Violation) XXX_Unmarshal(b []byte) error {
 func (m *QuotaFailure_Violation) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_QuotaFailure_Violation.Marshal(b, m, deterministic)
 }
-func (dst *QuotaFailure_Violation) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_QuotaFailure_Violation.Merge(dst, src)
+func (m *QuotaFailure_Violation) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_QuotaFailure_Violation.Merge(m, src)
 }
 func (m *QuotaFailure_Violation) XXX_Size() int {
 	return xxx_messageInfo_QuotaFailure_Violation.Size(m)
@@ -253,8 +253,8 @@ func (m *PreconditionFailure) XXX_Unmarshal(b []byte) error {
 func (m *PreconditionFailure) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_PreconditionFailure.Marshal(b, m, deterministic)
 }
-func (dst *PreconditionFailure) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PreconditionFailure.Merge(dst, src)
+func (m *PreconditionFailure) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PreconditionFailure.Merge(m, src)
 }
 func (m *PreconditionFailure) XXX_Size() int {
 	return xxx_messageInfo_PreconditionFailure.Size(m)
@@ -304,8 +304,8 @@ func (m *PreconditionFailure_Violation) XXX_Unmarshal(b []byte) error {
 func (m *PreconditionFailure_Violation) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_PreconditionFailure_Violation.Marshal(b, m, deterministic)
 }
-func (dst *PreconditionFailure_Violation) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PreconditionFailure_Violation.Merge(dst, src)
+func (m *PreconditionFailure_Violation) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PreconditionFailure_Violation.Merge(m, src)
 }
 func (m *PreconditionFailure_Violation) XXX_Size() int {
 	return xxx_messageInfo_PreconditionFailure_Violation.Size(m)
@@ -359,8 +359,8 @@ func (m *BadRequest) XXX_Unmarshal(b []byte) error {
 func (m *BadRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BadRequest.Marshal(b, m, deterministic)
 }
-func (dst *BadRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_BadRequest.Merge(dst, src)
+func (m *BadRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_BadRequest.Merge(m, src)
 }
 func (m *BadRequest) XXX_Size() int {
 	return xxx_messageInfo_BadRequest.Size(m)
@@ -403,8 +403,8 @@ func (m *BadRequest_FieldViolation) XXX_Unmarshal(b []byte) error {
 func (m *BadRequest_FieldViolation) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BadRequest_FieldViolation.Marshal(b, m, deterministic)
 }
-func (dst *BadRequest_FieldViolation) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_BadRequest_FieldViolation.Merge(dst, src)
+func (m *BadRequest_FieldViolation) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_BadRequest_FieldViolation.Merge(m, src)
 }
 func (m *BadRequest_FieldViolation) XXX_Size() int {
 	return xxx_messageInfo_BadRequest_FieldViolation.Size(m)
@@ -455,8 +455,8 @@ func (m *RequestInfo) XXX_Unmarshal(b []byte) error {
 func (m *RequestInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_RequestInfo.Marshal(b, m, deterministic)
 }
-func (dst *RequestInfo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RequestInfo.Merge(dst, src)
+func (m *RequestInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RequestInfo.Merge(m, src)
 }
 func (m *RequestInfo) XXX_Size() int {
 	return xxx_messageInfo_RequestInfo.Size(m)
@@ -516,8 +516,8 @@ func (m *ResourceInfo) XXX_Unmarshal(b []byte) error {
 func (m *ResourceInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ResourceInfo.Marshal(b, m, deterministic)
 }
-func (dst *ResourceInfo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ResourceInfo.Merge(dst, src)
+func (m *ResourceInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ResourceInfo.Merge(m, src)
 }
 func (m *ResourceInfo) XXX_Size() int {
 	return xxx_messageInfo_ResourceInfo.Size(m)
@@ -581,8 +581,8 @@ func (m *Help) XXX_Unmarshal(b []byte) error {
 func (m *Help) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Help.Marshal(b, m, deterministic)
 }
-func (dst *Help) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Help.Merge(dst, src)
+func (m *Help) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Help.Merge(m, src)
 }
 func (m *Help) XXX_Size() int {
 	return xxx_messageInfo_Help.Size(m)
@@ -623,8 +623,8 @@ func (m *Help_Link) XXX_Unmarshal(b []byte) error {
 func (m *Help_Link) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Help_Link.Marshal(b, m, deterministic)
 }
-func (dst *Help_Link) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Help_Link.Merge(dst, src)
+func (m *Help_Link) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Help_Link.Merge(m, src)
 }
 func (m *Help_Link) XXX_Size() int {
 	return xxx_messageInfo_Help_Link.Size(m)
@@ -675,8 +675,8 @@ func (m *LocalizedMessage) XXX_Unmarshal(b []byte) error {
 func (m *LocalizedMessage) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_LocalizedMessage.Marshal(b, m, deterministic)
 }
-func (dst *LocalizedMessage) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LocalizedMessage.Merge(dst, src)
+func (m *LocalizedMessage) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_LocalizedMessage.Merge(m, src)
 }
 func (m *LocalizedMessage) XXX_Size() int {
 	return xxx_messageInfo_LocalizedMessage.Size(m)

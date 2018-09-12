@@ -47,8 +47,8 @@ func (m *Secret) XXX_Unmarshal(b []byte) error {
 func (m *Secret) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Secret.Marshal(b, m, deterministic)
 }
-func (dst *Secret) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Secret.Merge(dst, src)
+func (m *Secret) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Secret.Merge(m, src)
 }
 func (m *Secret) XXX_Size() int {
 	return xxx_messageInfo_Secret.Size(m)
@@ -98,8 +98,8 @@ func (m *UpdateSecretRequest) XXX_Unmarshal(b []byte) error {
 func (m *UpdateSecretRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UpdateSecretRequest.Marshal(b, m, deterministic)
 }
-func (dst *UpdateSecretRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UpdateSecretRequest.Merge(dst, src)
+func (m *UpdateSecretRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UpdateSecretRequest.Merge(m, src)
 }
 func (m *UpdateSecretRequest) XXX_Size() int {
 	return xxx_messageInfo_UpdateSecretRequest.Size(m)
@@ -173,8 +173,8 @@ func (m *UpdateSecretResponse) XXX_Unmarshal(b []byte) error {
 func (m *UpdateSecretResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UpdateSecretResponse.Marshal(b, m, deterministic)
 }
-func (dst *UpdateSecretResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UpdateSecretResponse.Merge(dst, src)
+func (m *UpdateSecretResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UpdateSecretResponse.Merge(m, src)
 }
 func (m *UpdateSecretResponse) XXX_Size() int {
 	return xxx_messageInfo_UpdateSecretResponse.Size(m)
@@ -330,8 +330,8 @@ func (m *ForgotSecretRequest) XXX_Unmarshal(b []byte) error {
 func (m *ForgotSecretRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ForgotSecretRequest.Marshal(b, m, deterministic)
 }
-func (dst *ForgotSecretRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ForgotSecretRequest.Merge(dst, src)
+func (m *ForgotSecretRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ForgotSecretRequest.Merge(m, src)
 }
 func (m *ForgotSecretRequest) XXX_Size() int {
 	return xxx_messageInfo_ForgotSecretRequest.Size(m)
@@ -378,8 +378,8 @@ func (m *ForgotSecretResponse) XXX_Unmarshal(b []byte) error {
 func (m *ForgotSecretResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ForgotSecretResponse.Marshal(b, m, deterministic)
 }
-func (dst *ForgotSecretResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ForgotSecretResponse.Merge(dst, src)
+func (m *ForgotSecretResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ForgotSecretResponse.Merge(m, src)
 }
 func (m *ForgotSecretResponse) XXX_Size() int {
 	return xxx_messageInfo_ForgotSecretResponse.Size(m)

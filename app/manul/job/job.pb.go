@@ -107,8 +107,8 @@ func (m *JobResult) XXX_Unmarshal(b []byte) error {
 func (m *JobResult) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_JobResult.Marshal(b, m, deterministic)
 }
-func (dst *JobResult) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_JobResult.Merge(dst, src)
+func (m *JobResult) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_JobResult.Merge(m, src)
 }
 func (m *JobResult) XXX_Size() int {
 	return xxx_messageInfo_JobResult.Size(m)
@@ -162,8 +162,8 @@ func (m *Job) XXX_Unmarshal(b []byte) error {
 func (m *Job) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Job.Marshal(b, m, deterministic)
 }
-func (dst *Job) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Job.Merge(dst, src)
+func (m *Job) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Job.Merge(m, src)
 }
 func (m *Job) XXX_Size() int {
 	return xxx_messageInfo_Job.Size(m)
@@ -238,8 +238,8 @@ func (m *Jobs) XXX_Unmarshal(b []byte) error {
 func (m *Jobs) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Jobs.Marshal(b, m, deterministic)
 }
-func (dst *Jobs) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Jobs.Merge(dst, src)
+func (m *Jobs) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Jobs.Merge(m, src)
 }
 func (m *Jobs) XXX_Size() int {
 	return xxx_messageInfo_Jobs.Size(m)
@@ -304,8 +304,8 @@ func (m *ListJobsRequest) XXX_Unmarshal(b []byte) error {
 func (m *ListJobsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ListJobsRequest.Marshal(b, m, deterministic)
 }
-func (dst *ListJobsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListJobsRequest.Merge(dst, src)
+func (m *ListJobsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListJobsRequest.Merge(m, src)
 }
 func (m *ListJobsRequest) XXX_Size() int {
 	return xxx_messageInfo_ListJobsRequest.Size(m)
@@ -372,8 +372,8 @@ func (m *ListJobsResponse) XXX_Unmarshal(b []byte) error {
 func (m *ListJobsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ListJobsResponse.Marshal(b, m, deterministic)
 }
-func (dst *ListJobsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListJobsResponse.Merge(dst, src)
+func (m *ListJobsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ListJobsResponse.Merge(m, src)
 }
 func (m *ListJobsResponse) XXX_Size() int {
 	return xxx_messageInfo_ListJobsResponse.Size(m)
@@ -531,8 +531,8 @@ func (m *CreateJobRequest) XXX_Unmarshal(b []byte) error {
 func (m *CreateJobRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CreateJobRequest.Marshal(b, m, deterministic)
 }
-func (dst *CreateJobRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CreateJobRequest.Merge(dst, src)
+func (m *CreateJobRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CreateJobRequest.Merge(m, src)
 }
 func (m *CreateJobRequest) XXX_Size() int {
 	return xxx_messageInfo_CreateJobRequest.Size(m)
@@ -592,8 +592,8 @@ func (m *CreateJobResponse) XXX_Unmarshal(b []byte) error {
 func (m *CreateJobResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CreateJobResponse.Marshal(b, m, deterministic)
 }
-func (dst *CreateJobResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CreateJobResponse.Merge(dst, src)
+func (m *CreateJobResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CreateJobResponse.Merge(m, src)
 }
 func (m *CreateJobResponse) XXX_Size() int {
 	return xxx_messageInfo_CreateJobResponse.Size(m)
@@ -751,8 +751,8 @@ func (m *GetJobRequest) XXX_Unmarshal(b []byte) error {
 func (m *GetJobRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetJobRequest.Marshal(b, m, deterministic)
 }
-func (dst *GetJobRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetJobRequest.Merge(dst, src)
+func (m *GetJobRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetJobRequest.Merge(m, src)
 }
 func (m *GetJobRequest) XXX_Size() int {
 	return xxx_messageInfo_GetJobRequest.Size(m)
@@ -805,8 +805,8 @@ func (m *GetJobResponse) XXX_Unmarshal(b []byte) error {
 func (m *GetJobResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetJobResponse.Marshal(b, m, deterministic)
 }
-func (dst *GetJobResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetJobResponse.Merge(dst, src)
+func (m *GetJobResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetJobResponse.Merge(m, src)
 }
 func (m *GetJobResponse) XXX_Size() int {
 	return xxx_messageInfo_GetJobResponse.Size(m)
@@ -964,8 +964,8 @@ func (m *CancelJobRequest) XXX_Unmarshal(b []byte) error {
 func (m *CancelJobRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CancelJobRequest.Marshal(b, m, deterministic)
 }
-func (dst *CancelJobRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CancelJobRequest.Merge(dst, src)
+func (m *CancelJobRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CancelJobRequest.Merge(m, src)
 }
 func (m *CancelJobRequest) XXX_Size() int {
 	return xxx_messageInfo_CancelJobRequest.Size(m)
@@ -1018,8 +1018,8 @@ func (m *CancelJobResponse) XXX_Unmarshal(b []byte) error {
 func (m *CancelJobResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CancelJobResponse.Marshal(b, m, deterministic)
 }
-func (dst *CancelJobResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CancelJobResponse.Merge(dst, src)
+func (m *CancelJobResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CancelJobResponse.Merge(m, src)
 }
 func (m *CancelJobResponse) XXX_Size() int {
 	return xxx_messageInfo_CancelJobResponse.Size(m)

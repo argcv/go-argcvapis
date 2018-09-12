@@ -79,8 +79,8 @@ func (m *LatLng) XXX_Unmarshal(b []byte) error {
 func (m *LatLng) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_LatLng.Marshal(b, m, deterministic)
 }
-func (dst *LatLng) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LatLng.Merge(dst, src)
+func (m *LatLng) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_LatLng.Merge(m, src)
 }
 func (m *LatLng) XXX_Size() int {
 	return xxx_messageInfo_LatLng.Size(m)

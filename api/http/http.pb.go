@@ -37,8 +37,8 @@ func (m *Http) XXX_Unmarshal(b []byte) error {
 func (m *Http) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Http.Marshal(b, m, deterministic)
 }
-func (dst *Http) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Http.Merge(dst, src)
+func (m *Http) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Http.Merge(m, src)
 }
 func (m *Http) XXX_Size() int {
 	return xxx_messageInfo_Http.Size(m)
@@ -85,8 +85,8 @@ func (m *HttpRule) XXX_Unmarshal(b []byte) error {
 func (m *HttpRule) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_HttpRule.Marshal(b, m, deterministic)
 }
-func (dst *HttpRule) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_HttpRule.Merge(dst, src)
+func (m *HttpRule) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_HttpRule.Merge(m, src)
 }
 func (m *HttpRule) XXX_Size() int {
 	return xxx_messageInfo_HttpRule.Size(m)
@@ -357,8 +357,8 @@ func (m *CustomHttpPattern) XXX_Unmarshal(b []byte) error {
 func (m *CustomHttpPattern) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CustomHttpPattern.Marshal(b, m, deterministic)
 }
-func (dst *CustomHttpPattern) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CustomHttpPattern.Merge(dst, src)
+func (m *CustomHttpPattern) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CustomHttpPattern.Merge(m, src)
 }
 func (m *CustomHttpPattern) XXX_Size() int {
 	return xxx_messageInfo_CustomHttpPattern.Size(m)
