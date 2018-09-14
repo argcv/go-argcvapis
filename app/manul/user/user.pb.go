@@ -3,11 +3,13 @@
 
 package user
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import _ "github.com/argcv/go-argcvapis/api/annotations"
-import status "github.com/argcv/go-argcvapis/status/status"
+import (
+	fmt "fmt"
+	_ "github.com/argcv/go-argcvapis/api/annotations"
+	status "github.com/argcv/go-argcvapis/status/status"
+	proto "github.com/golang/protobuf/proto"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"

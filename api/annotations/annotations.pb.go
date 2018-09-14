@@ -3,11 +3,13 @@
 
 package annotations
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import http "github.com/argcv/go-argcvapis/api/http"
-import descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
+import (
+	fmt "fmt"
+	http "github.com/argcv/go-argcvapis/api/http"
+	proto "github.com/golang/protobuf/proto"
+	descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
+	math "math"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

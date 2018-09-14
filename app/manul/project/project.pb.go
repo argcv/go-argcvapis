@@ -3,14 +3,16 @@
 
 package project
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import _ "github.com/argcv/go-argcvapis/api/annotations"
-import file "github.com/argcv/go-argcvapis/app/manul/file"
-import user "github.com/argcv/go-argcvapis/app/manul/user"
-import status "github.com/argcv/go-argcvapis/status/status"
-import _struct "github.com/golang/protobuf/ptypes/struct"
+import (
+	fmt "fmt"
+	_ "github.com/argcv/go-argcvapis/api/annotations"
+	file "github.com/argcv/go-argcvapis/app/manul/file"
+	user "github.com/argcv/go-argcvapis/app/manul/user"
+	status "github.com/argcv/go-argcvapis/status/status"
+	proto "github.com/golang/protobuf/proto"
+	_struct "github.com/golang/protobuf/ptypes/struct"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"

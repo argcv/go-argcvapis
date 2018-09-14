@@ -3,13 +3,15 @@
 
 package longrunning
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import _ "github.com/argcv/go-argcvapis/api/annotations"
-import status "github.com/argcv/go-argcvapis/status/status"
-import any "github.com/golang/protobuf/ptypes/any"
-import empty "github.com/golang/protobuf/ptypes/empty"
+import (
+	fmt "fmt"
+	_ "github.com/argcv/go-argcvapis/api/annotations"
+	status "github.com/argcv/go-argcvapis/status/status"
+	proto "github.com/golang/protobuf/proto"
+	any "github.com/golang/protobuf/ptypes/any"
+	empty "github.com/golang/protobuf/ptypes/empty"
+	math "math"
+)
 
 import (
 	context "golang.org/x/net/context"

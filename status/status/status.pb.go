@@ -3,11 +3,13 @@
 
 package status
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import errcodes "github.com/argcv/go-argcvapis/status/errcodes"
-import any "github.com/golang/protobuf/ptypes/any"
+import (
+	fmt "fmt"
+	errcodes "github.com/argcv/go-argcvapis/status/errcodes"
+	proto "github.com/golang/protobuf/proto"
+	any "github.com/golang/protobuf/ptypes/any"
+	math "math"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
