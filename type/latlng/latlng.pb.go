@@ -75,6 +75,7 @@ func (*LatLng) ProtoMessage()    {}
 func (*LatLng) Descriptor() ([]byte, []int) {
 	return fileDescriptor_90cd168e5b33c51d, []int{0}
 }
+
 func (m *LatLng) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_LatLng.Unmarshal(m, b)
 }

@@ -80,6 +80,7 @@ func (*AuthToken) ProtoMessage()    {}
 func (*AuthToken) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{0}
 }
+
 func (m *AuthToken) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AuthToken.Unmarshal(m, b)
 }
@@ -139,6 +140,7 @@ func (*User) ProtoMessage()    {}
 func (*User) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{1}
 }
+
 func (m *User) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_User.Unmarshal(m, b)
 }
@@ -208,6 +210,7 @@ func (*Users) ProtoMessage()    {}
 func (*Users) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{2}
 }
+
 func (m *Users) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Users.Unmarshal(m, b)
 }
@@ -274,6 +277,7 @@ func (*ListUsersRequest) ProtoMessage()    {}
 func (*ListUsersRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{3}
 }
+
 func (m *ListUsersRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListUsersRequest.Unmarshal(m, b)
 }
@@ -342,6 +346,7 @@ func (*ListUsersResponse) ProtoMessage()    {}
 func (*ListUsersResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{4}
 }
+
 func (m *ListUsersResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListUsersResponse.Unmarshal(m, b)
 }
@@ -504,6 +509,7 @@ func (*CreateUserRequest) ProtoMessage()    {}
 func (*CreateUserRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{5}
 }
+
 func (m *CreateUserRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateUserRequest.Unmarshal(m, b)
 }
@@ -575,6 +581,7 @@ func (*CreateUserResponse) ProtoMessage()    {}
 func (*CreateUserResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{6}
 }
+
 func (m *CreateUserResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateUserResponse.Unmarshal(m, b)
 }
@@ -737,6 +744,7 @@ func (*UpdateUserRequest) ProtoMessage()    {}
 func (*UpdateUserRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{7}
 }
+
 func (m *UpdateUserRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UpdateUserRequest.Unmarshal(m, b)
 }
@@ -805,6 +813,7 @@ func (*UpdateUserResponse) ProtoMessage()    {}
 func (*UpdateUserResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{8}
 }
+
 func (m *UpdateUserResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UpdateUserResponse.Unmarshal(m, b)
 }
@@ -965,6 +974,7 @@ func (*GetUserRequest) ProtoMessage()    {}
 func (*GetUserRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{9}
 }
+
 func (m *GetUserRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetUserRequest.Unmarshal(m, b)
 }
@@ -1026,6 +1036,7 @@ func (*GetUserResponse) ProtoMessage()    {}
 func (*GetUserResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{10}
 }
+
 func (m *GetUserResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetUserResponse.Unmarshal(m, b)
 }
@@ -1185,6 +1196,7 @@ func (*DeleteUserRequest) ProtoMessage()    {}
 func (*DeleteUserRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{11}
 }
+
 func (m *DeleteUserRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteUserRequest.Unmarshal(m, b)
 }
@@ -1233,6 +1245,7 @@ func (*DeleteUserResponse) ProtoMessage()    {}
 func (*DeleteUserResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_39494a05d931c3b7, []int{12}
 }
+
 func (m *DeleteUserResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteUserResponse.Unmarshal(m, b)
 }

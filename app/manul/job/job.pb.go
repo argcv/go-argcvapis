@@ -103,6 +103,7 @@ func (*JobResult) ProtoMessage()    {}
 func (*JobResult) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{0}
 }
+
 func (m *JobResult) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_JobResult.Unmarshal(m, b)
 }
@@ -158,6 +159,7 @@ func (*Job) ProtoMessage()    {}
 func (*Job) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{1}
 }
+
 func (m *Job) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Job.Unmarshal(m, b)
 }
@@ -234,6 +236,7 @@ func (*Jobs) ProtoMessage()    {}
 func (*Jobs) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{2}
 }
+
 func (m *Jobs) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Jobs.Unmarshal(m, b)
 }
@@ -300,6 +303,7 @@ func (*ListJobsRequest) ProtoMessage()    {}
 func (*ListJobsRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{3}
 }
+
 func (m *ListJobsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListJobsRequest.Unmarshal(m, b)
 }
@@ -368,6 +372,7 @@ func (*ListJobsResponse) ProtoMessage()    {}
 func (*ListJobsResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{4}
 }
+
 func (m *ListJobsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListJobsResponse.Unmarshal(m, b)
 }
@@ -527,6 +532,7 @@ func (*CreateJobRequest) ProtoMessage()    {}
 func (*CreateJobRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{5}
 }
+
 func (m *CreateJobRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateJobRequest.Unmarshal(m, b)
 }
@@ -588,6 +594,7 @@ func (*CreateJobResponse) ProtoMessage()    {}
 func (*CreateJobResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{6}
 }
+
 func (m *CreateJobResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateJobResponse.Unmarshal(m, b)
 }
@@ -747,6 +754,7 @@ func (*GetJobRequest) ProtoMessage()    {}
 func (*GetJobRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{7}
 }
+
 func (m *GetJobRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetJobRequest.Unmarshal(m, b)
 }
@@ -801,6 +809,7 @@ func (*GetJobResponse) ProtoMessage()    {}
 func (*GetJobResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{8}
 }
+
 func (m *GetJobResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetJobResponse.Unmarshal(m, b)
 }
@@ -960,6 +969,7 @@ func (*CancelJobRequest) ProtoMessage()    {}
 func (*CancelJobRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{9}
 }
+
 func (m *CancelJobRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CancelJobRequest.Unmarshal(m, b)
 }
@@ -1014,6 +1024,7 @@ func (*CancelJobResponse) ProtoMessage()    {}
 func (*CancelJobResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1b9ab124c0102e6a, []int{10}
 }
+
 func (m *CancelJobResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CancelJobResponse.Unmarshal(m, b)
 }

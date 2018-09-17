@@ -33,6 +33,7 @@ func (*Http) ProtoMessage()    {}
 func (*Http) Descriptor() ([]byte, []int) {
 	return fileDescriptor_823384e6c90ba5e1, []int{0}
 }
+
 func (m *Http) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Http.Unmarshal(m, b)
 }
@@ -81,6 +82,7 @@ func (*HttpRule) ProtoMessage()    {}
 func (*HttpRule) Descriptor() ([]byte, []int) {
 	return fileDescriptor_823384e6c90ba5e1, []int{1}
 }
+
 func (m *HttpRule) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_HttpRule.Unmarshal(m, b)
 }
@@ -353,6 +355,7 @@ func (*CustomHttpPattern) ProtoMessage()    {}
 func (*CustomHttpPattern) Descriptor() ([]byte, []int) {
 	return fileDescriptor_823384e6c90ba5e1, []int{2}
 }
+
 func (m *CustomHttpPattern) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CustomHttpPattern.Unmarshal(m, b)
 }

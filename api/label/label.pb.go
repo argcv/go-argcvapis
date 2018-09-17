@@ -63,6 +63,7 @@ func (*LabelDescriptor) ProtoMessage()    {}
 func (*LabelDescriptor) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ac2bbc4ccf6ec7ba, []int{0}
 }
+
 func (m *LabelDescriptor) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_LabelDescriptor.Unmarshal(m, b)
 }

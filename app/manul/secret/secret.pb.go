@@ -43,6 +43,7 @@ func (*Secret) ProtoMessage()    {}
 func (*Secret) Descriptor() ([]byte, []int) {
 	return fileDescriptor_99e5759c6d0aac59, []int{0}
 }
+
 func (m *Secret) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Secret.Unmarshal(m, b)
 }
@@ -94,6 +95,7 @@ func (*UpdateSecretRequest) ProtoMessage()    {}
 func (*UpdateSecretRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_99e5759c6d0aac59, []int{1}
 }
+
 func (m *UpdateSecretRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UpdateSecretRequest.Unmarshal(m, b)
 }
@@ -169,6 +171,7 @@ func (*UpdateSecretResponse) ProtoMessage()    {}
 func (*UpdateSecretResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_99e5759c6d0aac59, []int{2}
 }
+
 func (m *UpdateSecretResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UpdateSecretResponse.Unmarshal(m, b)
 }
@@ -326,6 +329,7 @@ func (*ForgotSecretRequest) ProtoMessage()    {}
 func (*ForgotSecretRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_99e5759c6d0aac59, []int{3}
 }
+
 func (m *ForgotSecretRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ForgotSecretRequest.Unmarshal(m, b)
 }
@@ -374,6 +378,7 @@ func (*ForgotSecretResponse) ProtoMessage()    {}
 func (*ForgotSecretResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_99e5759c6d0aac59, []int{4}
 }
+
 func (m *ForgotSecretResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ForgotSecretResponse.Unmarshal(m, b)
 }
