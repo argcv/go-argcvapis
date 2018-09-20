@@ -104,8 +104,8 @@ func (m *LabelDescriptor) GetDescription() string {
 }
 
 func init() {
-	proto.RegisterType((*LabelDescriptor)(nil), "argcv.api.LabelDescriptor")
 	proto.RegisterEnum("argcv.api.LabelDescriptor_ValueType", LabelDescriptor_ValueType_name, LabelDescriptor_ValueType_value)
+	proto.RegisterType((*LabelDescriptor)(nil), "argcv.api.LabelDescriptor")
 }
 
 func init() { proto.RegisterFile("argcv/proto/api/label.proto", fileDescriptor_ac2bbc4ccf6ec7ba) }

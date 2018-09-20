@@ -1169,6 +1169,7 @@ func _CancelJobResponse_OneofSizer(msg proto.Message) (n int) {
 }
 
 func init() {
+	proto.RegisterEnum("argcv.app.manul.JobProgress", JobProgress_name, JobProgress_value)
 	proto.RegisterType((*JobResult)(nil), "argcv.app.manul.JobResult")
 	proto.RegisterType((*Job)(nil), "argcv.app.manul.Job")
 	proto.RegisterType((*Jobs)(nil), "argcv.app.manul.Jobs")
@@ -1180,7 +1181,6 @@ func init() {
 	proto.RegisterType((*GetJobResponse)(nil), "argcv.app.manul.GetJobResponse")
 	proto.RegisterType((*CancelJobRequest)(nil), "argcv.app.manul.CancelJobRequest")
 	proto.RegisterType((*CancelJobResponse)(nil), "argcv.app.manul.CancelJobResponse")
-	proto.RegisterEnum("argcv.app.manul.JobProgress", JobProgress_name, JobProgress_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.

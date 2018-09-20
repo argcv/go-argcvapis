@@ -2442,6 +2442,9 @@ func _UpdateProjectMemberResponse_OneofSizer(msg proto.Message) (n int) {
 }
 
 func init() {
+	proto.RegisterEnum("argcv.app.manul.ProjectChecklistElemType", ProjectChecklistElemType_name, ProjectChecklistElemType_value)
+	proto.RegisterEnum("argcv.app.manul.ProjectMemberType", ProjectMemberType_name, ProjectMemberType_value)
+	proto.RegisterEnum("argcv.app.manul.ProjectMemberOperation", ProjectMemberOperation_name, ProjectMemberOperation_value)
 	proto.RegisterType((*ProjectChecklistElem)(nil), "argcv.app.manul.ProjectChecklistElem")
 	proto.RegisterType((*ProjectChecklist)(nil), "argcv.app.manul.ProjectChecklist")
 	proto.RegisterType((*ProjectEnvironment)(nil), "argcv.app.manul.ProjectEnvironment")
@@ -2468,9 +2471,6 @@ func init() {
 	proto.RegisterType((*ProjectMembersUpdateElem)(nil), "argcv.app.manul.ProjectMembersUpdateElem")
 	proto.RegisterType((*UpdateProjectMemberRequest)(nil), "argcv.app.manul.UpdateProjectMemberRequest")
 	proto.RegisterType((*UpdateProjectMemberResponse)(nil), "argcv.app.manul.UpdateProjectMemberResponse")
-	proto.RegisterEnum("argcv.app.manul.ProjectChecklistElemType", ProjectChecklistElemType_name, ProjectChecklistElemType_value)
-	proto.RegisterEnum("argcv.app.manul.ProjectMemberType", ProjectMemberType_name, ProjectMemberType_value)
-	proto.RegisterEnum("argcv.app.manul.ProjectMemberOperation", ProjectMemberOperation_name, ProjectMemberOperation_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.

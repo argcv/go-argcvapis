@@ -1286,6 +1286,7 @@ func (m *DeleteUserResponse) GetError() *status.Status {
 }
 
 func init() {
+	proto.RegisterEnum("argcv.app.manul.UserType", UserType_name, UserType_value)
 	proto.RegisterType((*AuthToken)(nil), "argcv.app.manul.AuthToken")
 	proto.RegisterType((*User)(nil), "argcv.app.manul.User")
 	proto.RegisterType((*Users)(nil), "argcv.app.manul.Users")
@@ -1299,7 +1300,6 @@ func init() {
 	proto.RegisterType((*GetUserResponse)(nil), "argcv.app.manul.GetUserResponse")
 	proto.RegisterType((*DeleteUserRequest)(nil), "argcv.app.manul.DeleteUserRequest")
 	proto.RegisterType((*DeleteUserResponse)(nil), "argcv.app.manul.DeleteUserResponse")
-	proto.RegisterEnum("argcv.app.manul.UserType", UserType_name, UserType_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
