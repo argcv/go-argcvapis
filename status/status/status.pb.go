@@ -5,10 +5,11 @@ package status
 
 import (
 	fmt "fmt"
+	math "math"
+
 	errcodes "github.com/argcv/go-argcvapis/status/errcodes"
 	proto "github.com/golang/protobuf/proto"
 	any "github.com/golang/protobuf/ptypes/any"
-	math "math"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
