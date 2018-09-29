@@ -5,8 +5,6 @@ package project
 
 import (
 	fmt "fmt"
-	math "math"
-
 	_ "github.com/argcv/go-argcvapis/api/annotations"
 	file "github.com/argcv/go-argcvapis/app/manul/file"
 	user "github.com/argcv/go-argcvapis/app/manul/user"
@@ -15,6 +13,7 @@ import (
 	_struct "github.com/golang/protobuf/ptypes/struct"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
+	math "math"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
