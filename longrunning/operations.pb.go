@@ -4,13 +4,13 @@
 package longrunning
 
 import (
+	context "context"
 	fmt "fmt"
 	_ "github.com/argcv/go-argcvapis/api/annotations"
 	status "github.com/argcv/go-argcvapis/status/status"
 	proto "github.com/golang/protobuf/proto"
 	any "github.com/golang/protobuf/ptypes/any"
 	empty "github.com/golang/protobuf/ptypes/empty"
-	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	math "math"
 )

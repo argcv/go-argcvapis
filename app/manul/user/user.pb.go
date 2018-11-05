@@ -4,11 +4,11 @@
 package user
 
 import (
+	context "context"
 	fmt "fmt"
 	_ "github.com/argcv/go-argcvapis/api/annotations"
 	status "github.com/argcv/go-argcvapis/status/status"
 	proto "github.com/golang/protobuf/proto"
-	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	math "math"
 )

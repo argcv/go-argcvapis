@@ -4,6 +4,7 @@
 package project
 
 import (
+	context "context"
 	fmt "fmt"
 	_ "github.com/argcv/go-argcvapis/api/annotations"
 	file "github.com/argcv/go-argcvapis/app/manul/file"
@@ -11,7 +12,6 @@ import (
 	status "github.com/argcv/go-argcvapis/status/status"
 	proto "github.com/golang/protobuf/proto"
 	_struct "github.com/golang/protobuf/ptypes/struct"
-	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	math "math"
 )
