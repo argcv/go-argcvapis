@@ -24,7 +24,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 type JobProgress int32
 
@@ -439,78 +439,12 @@ func (m *ListJobsResponse) GetJobs() *Jobs {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*ListJobsResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _ListJobsResponse_OneofMarshaler, _ListJobsResponse_OneofUnmarshaler, _ListJobsResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*ListJobsResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*ListJobsResponse_Error)(nil),
 		(*ListJobsResponse_Jobs)(nil),
 	}
-}
-
-func _ListJobsResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*ListJobsResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *ListJobsResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *ListJobsResponse_Jobs:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Jobs); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("ListJobsResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _ListJobsResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*ListJobsResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &ListJobsResponse_Error{msg}
-		return true, err
-	case 4: // result.jobs
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Jobs)
-		err := b.DecodeMessage(msg)
-		m.Result = &ListJobsResponse_Jobs{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _ListJobsResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*ListJobsResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *ListJobsResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *ListJobsResponse_Jobs:
-		s := proto.Size(x.Jobs)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type CreateJobRequest struct {
@@ -661,78 +595,12 @@ func (m *CreateJobResponse) GetJob() *Job {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*CreateJobResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _CreateJobResponse_OneofMarshaler, _CreateJobResponse_OneofUnmarshaler, _CreateJobResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*CreateJobResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*CreateJobResponse_Error)(nil),
 		(*CreateJobResponse_Job)(nil),
 	}
-}
-
-func _CreateJobResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*CreateJobResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *CreateJobResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *CreateJobResponse_Job:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Job); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("CreateJobResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _CreateJobResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*CreateJobResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &CreateJobResponse_Error{msg}
-		return true, err
-	case 4: // result.job
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Job)
-		err := b.DecodeMessage(msg)
-		m.Result = &CreateJobResponse_Job{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _CreateJobResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*CreateJobResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *CreateJobResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *CreateJobResponse_Job:
-		s := proto.Size(x.Job)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type GetJobRequest struct {
@@ -876,78 +744,12 @@ func (m *GetJobResponse) GetJob() *Job {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*GetJobResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _GetJobResponse_OneofMarshaler, _GetJobResponse_OneofUnmarshaler, _GetJobResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*GetJobResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*GetJobResponse_Error)(nil),
 		(*GetJobResponse_Job)(nil),
 	}
-}
-
-func _GetJobResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*GetJobResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *GetJobResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *GetJobResponse_Job:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Job); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("GetJobResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _GetJobResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*GetJobResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &GetJobResponse_Error{msg}
-		return true, err
-	case 4: // result.job
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Job)
-		err := b.DecodeMessage(msg)
-		m.Result = &GetJobResponse_Job{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _GetJobResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*GetJobResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *GetJobResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *GetJobResponse_Job:
-		s := proto.Size(x.Job)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type CancelJobRequest struct {
@@ -1091,78 +893,12 @@ func (m *CancelJobResponse) GetJob() *Job {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*CancelJobResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _CancelJobResponse_OneofMarshaler, _CancelJobResponse_OneofUnmarshaler, _CancelJobResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*CancelJobResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*CancelJobResponse_Error)(nil),
 		(*CancelJobResponse_Job)(nil),
 	}
-}
-
-func _CancelJobResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*CancelJobResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *CancelJobResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *CancelJobResponse_Job:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Job); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("CancelJobResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _CancelJobResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*CancelJobResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &CancelJobResponse_Error{msg}
-		return true, err
-	case 4: // result.job
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Job)
-		err := b.DecodeMessage(msg)
-		m.Result = &CancelJobResponse_Job{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _CancelJobResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*CancelJobResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *CancelJobResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *CancelJobResponse_Job:
-		s := proto.Size(x.Job)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 func init() {

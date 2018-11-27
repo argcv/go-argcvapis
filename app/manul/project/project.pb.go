@@ -25,7 +25,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Currently, it only support file and folder
 type ProjectChecklistElemType int32
@@ -747,78 +747,12 @@ func (m *ListProjectsResponse) GetProjects() *Projects {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*ListProjectsResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _ListProjectsResponse_OneofMarshaler, _ListProjectsResponse_OneofUnmarshaler, _ListProjectsResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*ListProjectsResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*ListProjectsResponse_Error)(nil),
 		(*ListProjectsResponse_Projects)(nil),
 	}
-}
-
-func _ListProjectsResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*ListProjectsResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *ListProjectsResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *ListProjectsResponse_Projects:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Projects); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("ListProjectsResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _ListProjectsResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*ListProjectsResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &ListProjectsResponse_Error{msg}
-		return true, err
-	case 4: // result.projects
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Projects)
-		err := b.DecodeMessage(msg)
-		m.Result = &ListProjectsResponse_Projects{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _ListProjectsResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*ListProjectsResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *ListProjectsResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *ListProjectsResponse_Projects:
-		s := proto.Size(x.Projects)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type CreateProjectRequest struct {
@@ -957,78 +891,12 @@ func (m *CreateProjectResponse) GetProject() *Project {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*CreateProjectResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _CreateProjectResponse_OneofMarshaler, _CreateProjectResponse_OneofUnmarshaler, _CreateProjectResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*CreateProjectResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*CreateProjectResponse_Error)(nil),
 		(*CreateProjectResponse_Project)(nil),
 	}
-}
-
-func _CreateProjectResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*CreateProjectResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *CreateProjectResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *CreateProjectResponse_Project:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Project); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("CreateProjectResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _CreateProjectResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*CreateProjectResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &CreateProjectResponse_Error{msg}
-		return true, err
-	case 4: // result.project
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Project)
-		err := b.DecodeMessage(msg)
-		m.Result = &CreateProjectResponse_Project{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _CreateProjectResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*CreateProjectResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *CreateProjectResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *CreateProjectResponse_Project:
-		s := proto.Size(x.Project)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type UpdateProjectRequest struct {
@@ -1179,78 +1047,12 @@ func (m *UpdateProjectResponse) GetProject() *Project {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*UpdateProjectResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _UpdateProjectResponse_OneofMarshaler, _UpdateProjectResponse_OneofUnmarshaler, _UpdateProjectResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*UpdateProjectResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*UpdateProjectResponse_Error)(nil),
 		(*UpdateProjectResponse_Project)(nil),
 	}
-}
-
-func _UpdateProjectResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*UpdateProjectResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *UpdateProjectResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *UpdateProjectResponse_Project:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Project); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("UpdateProjectResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _UpdateProjectResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*UpdateProjectResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &UpdateProjectResponse_Error{msg}
-		return true, err
-	case 4: // result.project
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Project)
-		err := b.DecodeMessage(msg)
-		m.Result = &UpdateProjectResponse_Project{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _UpdateProjectResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*UpdateProjectResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *UpdateProjectResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *UpdateProjectResponse_Project:
-		s := proto.Size(x.Project)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type GetProjectRequest struct {
@@ -1403,78 +1205,12 @@ func (m *GetProjectResponse) GetProject() *Project {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*GetProjectResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _GetProjectResponse_OneofMarshaler, _GetProjectResponse_OneofUnmarshaler, _GetProjectResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*GetProjectResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*GetProjectResponse_Error)(nil),
 		(*GetProjectResponse_Project)(nil),
 	}
-}
-
-func _GetProjectResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*GetProjectResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *GetProjectResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *GetProjectResponse_Project:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Project); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("GetProjectResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _GetProjectResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*GetProjectResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &GetProjectResponse_Error{msg}
-		return true, err
-	case 4: // result.project
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Project)
-		err := b.DecodeMessage(msg)
-		m.Result = &GetProjectResponse_Project{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _GetProjectResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*GetProjectResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *GetProjectResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *GetProjectResponse_Project:
-		s := proto.Size(x.Project)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type GetProjectChecklistRequest struct {
@@ -1617,78 +1353,12 @@ func (m *GetProjectChecklistResponse) GetData() *ProjectChecklist {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*GetProjectChecklistResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _GetProjectChecklistResponse_OneofMarshaler, _GetProjectChecklistResponse_OneofUnmarshaler, _GetProjectChecklistResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*GetProjectChecklistResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*GetProjectChecklistResponse_Error)(nil),
 		(*GetProjectChecklistResponse_Data)(nil),
 	}
-}
-
-func _GetProjectChecklistResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*GetProjectChecklistResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *GetProjectChecklistResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *GetProjectChecklistResponse_Data:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Data); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("GetProjectChecklistResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _GetProjectChecklistResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*GetProjectChecklistResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &GetProjectChecklistResponse_Error{msg}
-		return true, err
-	case 4: // result.data
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(ProjectChecklist)
-		err := b.DecodeMessage(msg)
-		m.Result = &GetProjectChecklistResponse_Data{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _GetProjectChecklistResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*GetProjectChecklistResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *GetProjectChecklistResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *GetProjectChecklistResponse_Data:
-		s := proto.Size(x.Data)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type DeleteProjectRequest struct {
@@ -2094,78 +1764,12 @@ func (m *ListProjectMembersResponse) GetMembers() *ProjectMembers {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*ListProjectMembersResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _ListProjectMembersResponse_OneofMarshaler, _ListProjectMembersResponse_OneofUnmarshaler, _ListProjectMembersResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*ListProjectMembersResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*ListProjectMembersResponse_Error)(nil),
 		(*ListProjectMembersResponse_Members)(nil),
 	}
-}
-
-func _ListProjectMembersResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*ListProjectMembersResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *ListProjectMembersResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *ListProjectMembersResponse_Members:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Members); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("ListProjectMembersResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _ListProjectMembersResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*ListProjectMembersResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &ListProjectMembersResponse_Error{msg}
-		return true, err
-	case 4: // result.members
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(ProjectMembers)
-		err := b.DecodeMessage(msg)
-		m.Result = &ListProjectMembersResponse_Members{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _ListProjectMembersResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*ListProjectMembersResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *ListProjectMembersResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *ListProjectMembersResponse_Members:
-		s := proto.Size(x.Members)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type ProjectMembersUpdateElem struct {
@@ -2364,78 +1968,12 @@ func (m *UpdateProjectMemberResponse) GetMember() *ProjectMember {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*UpdateProjectMemberResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _UpdateProjectMemberResponse_OneofMarshaler, _UpdateProjectMemberResponse_OneofUnmarshaler, _UpdateProjectMemberResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*UpdateProjectMemberResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*UpdateProjectMemberResponse_Error)(nil),
 		(*UpdateProjectMemberResponse_Member)(nil),
 	}
-}
-
-func _UpdateProjectMemberResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*UpdateProjectMemberResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *UpdateProjectMemberResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *UpdateProjectMemberResponse_Member:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Member); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("UpdateProjectMemberResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _UpdateProjectMemberResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*UpdateProjectMemberResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &UpdateProjectMemberResponse_Error{msg}
-		return true, err
-	case 4: // result.member
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(ProjectMember)
-		err := b.DecodeMessage(msg)
-		m.Result = &UpdateProjectMemberResponse_Member{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _UpdateProjectMemberResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*UpdateProjectMemberResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *UpdateProjectMemberResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *UpdateProjectMemberResponse_Member:
-		s := proto.Size(x.Member)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 func init() {

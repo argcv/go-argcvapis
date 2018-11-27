@@ -23,7 +23,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // A simple struct to define secretorization info
 type Secret struct {
@@ -238,78 +238,12 @@ func (m *UpdateSecretResponse) GetSecret() *Secret {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*UpdateSecretResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _UpdateSecretResponse_OneofMarshaler, _UpdateSecretResponse_OneofUnmarshaler, _UpdateSecretResponse_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*UpdateSecretResponse) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*UpdateSecretResponse_Error)(nil),
 		(*UpdateSecretResponse_Secret)(nil),
 	}
-}
-
-func _UpdateSecretResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*UpdateSecretResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *UpdateSecretResponse_Error:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Error); err != nil {
-			return err
-		}
-	case *UpdateSecretResponse_Secret:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Secret); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("UpdateSecretResponse.Result has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _UpdateSecretResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*UpdateSecretResponse)
-	switch tag {
-	case 3: // result.error
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(status.Status)
-		err := b.DecodeMessage(msg)
-		m.Result = &UpdateSecretResponse_Error{msg}
-		return true, err
-	case 4: // result.secret
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Secret)
-		err := b.DecodeMessage(msg)
-		m.Result = &UpdateSecretResponse_Secret{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _UpdateSecretResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*UpdateSecretResponse)
-	// result
-	switch x := m.Result.(type) {
-	case *UpdateSecretResponse_Error:
-		s := proto.Size(x.Error)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *UpdateSecretResponse_Secret:
-		s := proto.Size(x.Secret)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type ForgotSecretRequest struct {
