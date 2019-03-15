@@ -12,6 +12,8 @@ import (
 	any "github.com/golang/protobuf/ptypes/any"
 	empty "github.com/golang/protobuf/ptypes/empty"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status1 "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -445,6 +447,10 @@ var fileDescriptor_1f2304056d989915 = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
+func errUnimplemented(methodName string) error {
+	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
+}
+
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -553,6 +559,23 @@ type OperationsServer interface {
 	// an [Operation.error][argcv.longrunning.Operation.error] value with a [argcv.status.Status.code][argcv.status.Status.code] of 1,
 	// corresponding to `Code.CANCELLED`.
 	CancelOperation(context.Context, *CancelOperationRequest) (*empty.Empty, error)
+}
+
+// UnimplementedOperationsServer can be embedded to have forward compatible implementations.
+type UnimplementedOperationsServer struct {
+}
+
+func (*UnimplementedOperationsServer) ListOperations(ctx context.Context, req *ListOperationsRequest) (*ListOperationsResponse, error) {
+	return nil, errUnimplemented("ListOperations")
+}
+func (*UnimplementedOperationsServer) GetOperation(ctx context.Context, req *GetOperationRequest) (*Operation, error) {
+	return nil, errUnimplemented("GetOperation")
+}
+func (*UnimplementedOperationsServer) DeleteOperation(ctx context.Context, req *DeleteOperationRequest) (*empty.Empty, error) {
+	return nil, errUnimplemented("DeleteOperation")
+}
+func (*UnimplementedOperationsServer) CancelOperation(ctx context.Context, req *CancelOperationRequest) (*empty.Empty, error) {
+	return nil, errUnimplemented("CancelOperation")
 }
 
 func RegisterOperationsServer(s *grpc.Server, srv OperationsServer) {

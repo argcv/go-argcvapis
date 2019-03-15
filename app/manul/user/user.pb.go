@@ -10,6 +10,8 @@ import (
 	status "github.com/argcv/go-argcvapis/status/status"
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status1 "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -1098,6 +1100,10 @@ var fileDescriptor_39494a05d931c3b7 = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
+func errUnimplemented(methodName string) error {
+	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
+}
+
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -1173,6 +1179,26 @@ type UserServiceServer interface {
 	UpdateUser(context.Context, *UpdateUserRequest) (*UpdateUserResponse, error)
 	GetUser(context.Context, *GetUserRequest) (*GetUserResponse, error)
 	DeleteUser(context.Context, *DeleteUserRequest) (*DeleteUserResponse, error)
+}
+
+// UnimplementedUserServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUserServiceServer struct {
+}
+
+func (*UnimplementedUserServiceServer) ListUsers(ctx context.Context, req *ListUsersRequest) (*ListUsersResponse, error) {
+	return nil, errUnimplemented("ListUsers")
+}
+func (*UnimplementedUserServiceServer) CreateUser(ctx context.Context, req *CreateUserRequest) (*CreateUserResponse, error) {
+	return nil, errUnimplemented("CreateUser")
+}
+func (*UnimplementedUserServiceServer) UpdateUser(ctx context.Context, req *UpdateUserRequest) (*UpdateUserResponse, error) {
+	return nil, errUnimplemented("UpdateUser")
+}
+func (*UnimplementedUserServiceServer) GetUser(ctx context.Context, req *GetUserRequest) (*GetUserResponse, error) {
+	return nil, errUnimplemented("GetUser")
+}
+func (*UnimplementedUserServiceServer) DeleteUser(ctx context.Context, req *DeleteUserRequest) (*DeleteUserResponse, error) {
+	return nil, errUnimplemented("DeleteUser")
 }
 
 func RegisterUserServiceServer(s *grpc.Server, srv UserServiceServer) {

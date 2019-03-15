@@ -13,6 +13,8 @@ import (
 	proto "github.com/golang/protobuf/proto"
 	_struct "github.com/golang/protobuf/ptypes/struct"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status1 "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -2120,6 +2122,10 @@ var fileDescriptor_cf85089881f8148b = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
+func errUnimplemented(methodName string) error {
+	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
+}
+
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -2232,6 +2238,35 @@ type ProjectServiceServer interface {
 	// Add/Delete/Change Project Members
 	UpdateProjectMember(context.Context, *UpdateProjectMemberRequest) (*UpdateProjectMemberResponse, error)
 	ListProjectMembers(context.Context, *ListProjectMembersRequest) (*ListProjectMembersResponse, error)
+}
+
+// UnimplementedProjectServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedProjectServiceServer struct {
+}
+
+func (*UnimplementedProjectServiceServer) ListProjects(ctx context.Context, req *ListProjectsRequest) (*ListProjectsResponse, error) {
+	return nil, errUnimplemented("ListProjects")
+}
+func (*UnimplementedProjectServiceServer) CreateProject(ctx context.Context, req *CreateProjectRequest) (*CreateProjectResponse, error) {
+	return nil, errUnimplemented("CreateProject")
+}
+func (*UnimplementedProjectServiceServer) UpdateProject(ctx context.Context, req *UpdateProjectRequest) (*UpdateProjectResponse, error) {
+	return nil, errUnimplemented("UpdateProject")
+}
+func (*UnimplementedProjectServiceServer) GetProject(ctx context.Context, req *GetProjectRequest) (*GetProjectResponse, error) {
+	return nil, errUnimplemented("GetProject")
+}
+func (*UnimplementedProjectServiceServer) GetProjectChecklist(ctx context.Context, req *GetProjectChecklistRequest) (*GetProjectChecklistResponse, error) {
+	return nil, errUnimplemented("GetProjectChecklist")
+}
+func (*UnimplementedProjectServiceServer) DeleteProject(ctx context.Context, req *DeleteProjectRequest) (*DeleteProjectResponse, error) {
+	return nil, errUnimplemented("DeleteProject")
+}
+func (*UnimplementedProjectServiceServer) UpdateProjectMember(ctx context.Context, req *UpdateProjectMemberRequest) (*UpdateProjectMemberResponse, error) {
+	return nil, errUnimplemented("UpdateProjectMember")
+}
+func (*UnimplementedProjectServiceServer) ListProjectMembers(ctx context.Context, req *ListProjectMembersRequest) (*ListProjectMembersResponse, error) {
+	return nil, errUnimplemented("ListProjectMembers")
 }
 
 func RegisterProjectServiceServer(s *grpc.Server, srv ProjectServiceServer) {

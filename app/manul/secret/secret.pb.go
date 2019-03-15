@@ -11,6 +11,8 @@ import (
 	status "github.com/argcv/go-argcvapis/status/status"
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status1 "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -401,6 +403,10 @@ var fileDescriptor_99e5759c6d0aac59 = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
+func errUnimplemented(methodName string) error {
+	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
+}
+
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -443,6 +449,17 @@ func (c *secretServiceClient) ForgotSecret(ctx context.Context, in *ForgotSecret
 type SecretServiceServer interface {
 	UpdateSecret(context.Context, *UpdateSecretRequest) (*UpdateSecretResponse, error)
 	ForgotSecret(context.Context, *ForgotSecretRequest) (*ForgotSecretResponse, error)
+}
+
+// UnimplementedSecretServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedSecretServiceServer struct {
+}
+
+func (*UnimplementedSecretServiceServer) UpdateSecret(ctx context.Context, req *UpdateSecretRequest) (*UpdateSecretResponse, error) {
+	return nil, errUnimplemented("UpdateSecret")
+}
+func (*UnimplementedSecretServiceServer) ForgotSecret(ctx context.Context, req *ForgotSecretRequest) (*ForgotSecretResponse, error) {
+	return nil, errUnimplemented("ForgotSecret")
 }
 
 func RegisterSecretServiceServer(s *grpc.Server, srv SecretServiceServer) {

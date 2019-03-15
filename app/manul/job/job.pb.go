@@ -12,6 +12,8 @@ import (
 	status "github.com/argcv/go-argcvapis/status/status"
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status1 "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -984,6 +986,10 @@ var fileDescriptor_1b9ab124c0102e6a = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
+func errUnimplemented(methodName string) error {
+	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
+}
+
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -1050,6 +1056,23 @@ type JobServiceServer interface {
 	CreateJob(context.Context, *CreateJobRequest) (*CreateJobResponse, error)
 	GetJob(context.Context, *GetJobRequest) (*GetJobResponse, error)
 	CancelJob(context.Context, *CancelJobRequest) (*CancelJobResponse, error)
+}
+
+// UnimplementedJobServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedJobServiceServer struct {
+}
+
+func (*UnimplementedJobServiceServer) ListJobs(ctx context.Context, req *ListJobsRequest) (*ListJobsResponse, error) {
+	return nil, errUnimplemented("ListJobs")
+}
+func (*UnimplementedJobServiceServer) CreateJob(ctx context.Context, req *CreateJobRequest) (*CreateJobResponse, error) {
+	return nil, errUnimplemented("CreateJob")
+}
+func (*UnimplementedJobServiceServer) GetJob(ctx context.Context, req *GetJobRequest) (*GetJobResponse, error) {
+	return nil, errUnimplemented("GetJob")
+}
+func (*UnimplementedJobServiceServer) CancelJob(ctx context.Context, req *CancelJobRequest) (*CancelJobResponse, error) {
+	return nil, errUnimplemented("CancelJob")
 }
 
 func RegisterJobServiceServer(s *grpc.Server, srv JobServiceServer) {
