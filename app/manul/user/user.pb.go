@@ -1100,10 +1100,6 @@ var fileDescriptor_39494a05d931c3b7 = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
-func errUnimplemented(methodName string) error {
-	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
-}
-
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -1186,19 +1182,19 @@ type UnimplementedUserServiceServer struct {
 }
 
 func (*UnimplementedUserServiceServer) ListUsers(ctx context.Context, req *ListUsersRequest) (*ListUsersResponse, error) {
-	return nil, errUnimplemented("ListUsers")
+	return nil, status1.Errorf(codes.Unimplemented, "method ListUsers not implemented")
 }
 func (*UnimplementedUserServiceServer) CreateUser(ctx context.Context, req *CreateUserRequest) (*CreateUserResponse, error) {
-	return nil, errUnimplemented("CreateUser")
+	return nil, status1.Errorf(codes.Unimplemented, "method CreateUser not implemented")
 }
 func (*UnimplementedUserServiceServer) UpdateUser(ctx context.Context, req *UpdateUserRequest) (*UpdateUserResponse, error) {
-	return nil, errUnimplemented("UpdateUser")
+	return nil, status1.Errorf(codes.Unimplemented, "method UpdateUser not implemented")
 }
 func (*UnimplementedUserServiceServer) GetUser(ctx context.Context, req *GetUserRequest) (*GetUserResponse, error) {
-	return nil, errUnimplemented("GetUser")
+	return nil, status1.Errorf(codes.Unimplemented, "method GetUser not implemented")
 }
 func (*UnimplementedUserServiceServer) DeleteUser(ctx context.Context, req *DeleteUserRequest) (*DeleteUserResponse, error) {
-	return nil, errUnimplemented("DeleteUser")
+	return nil, status1.Errorf(codes.Unimplemented, "method DeleteUser not implemented")
 }
 
 func RegisterUserServiceServer(s *grpc.Server, srv UserServiceServer) {

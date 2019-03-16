@@ -447,10 +447,6 @@ var fileDescriptor_1f2304056d989915 = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
-func errUnimplemented(methodName string) error {
-	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
-}
-
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -566,16 +562,16 @@ type UnimplementedOperationsServer struct {
 }
 
 func (*UnimplementedOperationsServer) ListOperations(ctx context.Context, req *ListOperationsRequest) (*ListOperationsResponse, error) {
-	return nil, errUnimplemented("ListOperations")
+	return nil, status1.Errorf(codes.Unimplemented, "method ListOperations not implemented")
 }
 func (*UnimplementedOperationsServer) GetOperation(ctx context.Context, req *GetOperationRequest) (*Operation, error) {
-	return nil, errUnimplemented("GetOperation")
+	return nil, status1.Errorf(codes.Unimplemented, "method GetOperation not implemented")
 }
 func (*UnimplementedOperationsServer) DeleteOperation(ctx context.Context, req *DeleteOperationRequest) (*empty.Empty, error) {
-	return nil, errUnimplemented("DeleteOperation")
+	return nil, status1.Errorf(codes.Unimplemented, "method DeleteOperation not implemented")
 }
 func (*UnimplementedOperationsServer) CancelOperation(ctx context.Context, req *CancelOperationRequest) (*empty.Empty, error) {
-	return nil, errUnimplemented("CancelOperation")
+	return nil, status1.Errorf(codes.Unimplemented, "method CancelOperation not implemented")
 }
 
 func RegisterOperationsServer(s *grpc.Server, srv OperationsServer) {

@@ -2122,10 +2122,6 @@ var fileDescriptor_cf85089881f8148b = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
-func errUnimplemented(methodName string) error {
-	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
-}
-
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -2245,28 +2241,28 @@ type UnimplementedProjectServiceServer struct {
 }
 
 func (*UnimplementedProjectServiceServer) ListProjects(ctx context.Context, req *ListProjectsRequest) (*ListProjectsResponse, error) {
-	return nil, errUnimplemented("ListProjects")
+	return nil, status1.Errorf(codes.Unimplemented, "method ListProjects not implemented")
 }
 func (*UnimplementedProjectServiceServer) CreateProject(ctx context.Context, req *CreateProjectRequest) (*CreateProjectResponse, error) {
-	return nil, errUnimplemented("CreateProject")
+	return nil, status1.Errorf(codes.Unimplemented, "method CreateProject not implemented")
 }
 func (*UnimplementedProjectServiceServer) UpdateProject(ctx context.Context, req *UpdateProjectRequest) (*UpdateProjectResponse, error) {
-	return nil, errUnimplemented("UpdateProject")
+	return nil, status1.Errorf(codes.Unimplemented, "method UpdateProject not implemented")
 }
 func (*UnimplementedProjectServiceServer) GetProject(ctx context.Context, req *GetProjectRequest) (*GetProjectResponse, error) {
-	return nil, errUnimplemented("GetProject")
+	return nil, status1.Errorf(codes.Unimplemented, "method GetProject not implemented")
 }
 func (*UnimplementedProjectServiceServer) GetProjectChecklist(ctx context.Context, req *GetProjectChecklistRequest) (*GetProjectChecklistResponse, error) {
-	return nil, errUnimplemented("GetProjectChecklist")
+	return nil, status1.Errorf(codes.Unimplemented, "method GetProjectChecklist not implemented")
 }
 func (*UnimplementedProjectServiceServer) DeleteProject(ctx context.Context, req *DeleteProjectRequest) (*DeleteProjectResponse, error) {
-	return nil, errUnimplemented("DeleteProject")
+	return nil, status1.Errorf(codes.Unimplemented, "method DeleteProject not implemented")
 }
 func (*UnimplementedProjectServiceServer) UpdateProjectMember(ctx context.Context, req *UpdateProjectMemberRequest) (*UpdateProjectMemberResponse, error) {
-	return nil, errUnimplemented("UpdateProjectMember")
+	return nil, status1.Errorf(codes.Unimplemented, "method UpdateProjectMember not implemented")
 }
 func (*UnimplementedProjectServiceServer) ListProjectMembers(ctx context.Context, req *ListProjectMembersRequest) (*ListProjectMembersResponse, error) {
-	return nil, errUnimplemented("ListProjectMembers")
+	return nil, status1.Errorf(codes.Unimplemented, "method ListProjectMembers not implemented")
 }
 
 func RegisterProjectServiceServer(s *grpc.Server, srv ProjectServiceServer) {

@@ -986,10 +986,6 @@ var fileDescriptor_1b9ab124c0102e6a = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
-func errUnimplemented(methodName string) error {
-	return status1.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
-}
-
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -1063,16 +1059,16 @@ type UnimplementedJobServiceServer struct {
 }
 
 func (*UnimplementedJobServiceServer) ListJobs(ctx context.Context, req *ListJobsRequest) (*ListJobsResponse, error) {
-	return nil, errUnimplemented("ListJobs")
+	return nil, status1.Errorf(codes.Unimplemented, "method ListJobs not implemented")
 }
 func (*UnimplementedJobServiceServer) CreateJob(ctx context.Context, req *CreateJobRequest) (*CreateJobResponse, error) {
-	return nil, errUnimplemented("CreateJob")
+	return nil, status1.Errorf(codes.Unimplemented, "method CreateJob not implemented")
 }
 func (*UnimplementedJobServiceServer) GetJob(ctx context.Context, req *GetJobRequest) (*GetJobResponse, error) {
-	return nil, errUnimplemented("GetJob")
+	return nil, status1.Errorf(codes.Unimplemented, "method GetJob not implemented")
 }
 func (*UnimplementedJobServiceServer) CancelJob(ctx context.Context, req *CancelJobRequest) (*CancelJobResponse, error) {
-	return nil, errUnimplemented("CancelJob")
+	return nil, status1.Errorf(codes.Unimplemented, "method CancelJob not implemented")
 }
 
 func RegisterJobServiceServer(s *grpc.Server, srv JobServiceServer) {
