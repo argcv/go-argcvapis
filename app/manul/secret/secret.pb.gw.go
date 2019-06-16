@@ -234,11 +234,11 @@ func RegisterSecretServiceHandlerClient(ctx context.Context, mux *runtime.ServeM
 }
 
 var (
-	pattern_SecretService_UpdateSecret_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "secret:reset", "user_id"}, ""))
+	pattern_SecretService_UpdateSecret_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "secret:reset", "user_id"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_SecretService_UpdateSecret_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "secret:reset", "user_id", "temp_token"}, ""))
+	pattern_SecretService_UpdateSecret_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "secret:reset", "user_id", "temp_token"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_SecretService_ForgotSecret_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "secret"}, "forgot"))
+	pattern_SecretService_ForgotSecret_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "secret"}, "forgot", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

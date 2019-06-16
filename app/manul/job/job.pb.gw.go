@@ -343,15 +343,15 @@ func RegisterJobServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 }
 
 var (
-	pattern_JobService_ListJobs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "job"}, "list"))
+	pattern_JobService_ListJobs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "job"}, "list", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_JobService_ListJobs_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "job:list", "filter", "offset", "size"}, ""))
+	pattern_JobService_ListJobs_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "job:list", "filter", "offset", "size"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_JobService_CreateJob_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "job"}, "create"))
+	pattern_JobService_CreateJob_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "job"}, "create", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_JobService_GetJob_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "job", "id"}, ""))
+	pattern_JobService_GetJob_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "job", "id"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_JobService_CancelJob_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "job", "id"}, ""))
+	pattern_JobService_CancelJob_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "job", "id"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (
