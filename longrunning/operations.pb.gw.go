@@ -278,7 +278,7 @@ func local_request_Operations_CancelOperation_0(ctx context.Context, marshaler r
 // RegisterOperationsHandlerServer registers the http handlers for service Operations to "mux".
 // UnaryRPC     :call OperationsServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
-func RegisterOperationsHandlerServer(ctx context.Context, mux *runtime.ServeMux, server OperationsServer, opts []grpc.DialOption) error {
+func RegisterOperationsHandlerServer(ctx context.Context, mux *runtime.ServeMux, server OperationsServer) error {
 
 	mux.Handle("GET", pattern_Operations_ListOperations_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())

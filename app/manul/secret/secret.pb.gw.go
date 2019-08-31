@@ -225,7 +225,7 @@ func local_request_SecretService_ForgotSecret_0(ctx context.Context, marshaler r
 // RegisterSecretServiceHandlerServer registers the http handlers for service SecretService to "mux".
 // UnaryRPC     :call SecretServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
-func RegisterSecretServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server SecretServiceServer, opts []grpc.DialOption) error {
+func RegisterSecretServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server SecretServiceServer) error {
 
 	mux.Handle("PUT", pattern_SecretService_UpdateSecret_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())

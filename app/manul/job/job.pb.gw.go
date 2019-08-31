@@ -349,7 +349,7 @@ func local_request_JobService_CancelJob_0(ctx context.Context, marshaler runtime
 // RegisterJobServiceHandlerServer registers the http handlers for service JobService to "mux".
 // UnaryRPC     :call JobServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
-func RegisterJobServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server JobServiceServer, opts []grpc.DialOption) error {
+func RegisterJobServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server JobServiceServer) error {
 
 	mux.Handle("GET", pattern_JobService_ListJobs_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
